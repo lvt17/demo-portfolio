@@ -496,6 +496,7 @@ aspect-ratio: 409/624;
   .about-me__image-wrapper {
     display: flex;
     justify-content: center;
+    padding-left: 40px;
   }
   
   .about-me__label {
