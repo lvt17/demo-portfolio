@@ -1,0 +1,492 @@
+/* ===== PROJECT PAGE STYLES ===== */
+
+.project {
+  background-color: #000;
+  min-height: 100vh;
+  padding: 120px 80px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Back Button */
+.project__back {
+  position: fixed;
+  margin-top: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  margin-bottom: 20px;
+}
+
+.project__back:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+.project__back img {
+  display: none;
+}
+
+.project__back::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  margin-left: 5px;
+}
+
+/* Hero Section */
+.project__hero {
+  position: relative;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.project__header {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 60px;
+  text-align: left;
+  width: 100%;
+}
+
+.project__category {
+  font-family: 'Handjet', sans-serif;
+  font-size: 128px;
+  font-weight: 600;
+  color: #fff;
+  line-height: normal;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  left: 100px;
+}
+
+.project__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 64px;
+  font-weight: 300;
+  font-style: italic;
+  color: #86ff86;
+  line-height: normal;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  left: 110px;
+}
+
+.project__poster {
+  max-width: 810px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.project__poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Decorations */
+.project__decor {
+  position: absolute;
+  pointer-events: none;
+}
+
+.project__decor--bamboo {
+  left: 0;
+  top: 300px;
+  width: 400px;
+  transform: scaleX(-1) rotate(2deg);
+  z-index: 1;
+}
+
+.project__decor--bamboo img {
+  width: 100%;
+  height: auto;
+}
+
+.project__decor--flower {
+  right: -100px;
+  top: 400px;
+  width: 350px;
+  z-index: 2;
+}
+
+.project__decor--flower img {
+  width: 100%;
+  height: auto;
+}
+
+/* Description Section */
+.project__description {
+  max-width: 1600px;
+  margin: 0 auto 80px;
+  padding: 0 50px;
+}
+
+.project__description p {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.project__description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tools Section */
+.project__tools {
+  margin-bottom: 100px;
+  padding: 0 50px;
+}
+
+.project__tools-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.project__tools-list {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.project__tool {
+  width: 120px;
+  height: 120px;
+}
+
+.project__tool img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Storyboard Section */
+.project__storyboard {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  margin-bottom: 150px;
+  padding: 0 50px;
+}
+
+.project__storyboard-item {
+  flex: 1;
+  max-width: 800px;
+}
+
+.project__storyboard-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CTA Section */
+.project__cta {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.project__cta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.project__cta-flower {
+  width: 227px;
+  height: 232px;
+  transform: rotate(180deg);
+}
+
+.project__cta-flower img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project__cta-btn {
+  display: inline-block;
+  background-color: #ffe7ab;
+  color: #000;
+  font-family: 'Handjet', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 18px 40px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project__cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 231, 171, 0.5);
+}
+
+/* ===== 2D&3D DESIGN PAGE ===== */
+.project__hero--2d3d {
+  align-items: flex-start;
+}
+
+.project__hero--2d3d .project__header {
+  text-align: left;
+  /* padding-left: 80px; */
+}
+
+.project__hero--2d3d .project__category {
+  text-align: left;
+  position: relative;
+  left: 50px;
+}
+
+.project__subtitle--2d3d {
+  text-align: left !important;
+}
+
+/* Interactive Code - longer subtitle fix */
+.project__subtitle--interactive {
+  text-align: left !important;
+  font-size: 48px;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Overlapping gallery layout */
+.project__gallery-overlap {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  margin-top: 40px;
+}
+
+.project__gallery-img {
+  position: absolute;
+}
+
+.project__gallery-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project__gallery-img--left {
+  left: 0;
+  top: 100px;
+  width: 45%;
+  max-width: 830px;
+  z-index: 2;
+}
+
+.project__gallery-img--right {
+  right: 0;
+  top: 0;
+  width: 48%;
+  max-width: 850px;
+  z-index: 1;
+}
+
+/* Larger tool icons for 2D3D page */
+.project__tool--large {
+  width: 200px;
+  height: 200px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .project {
+    padding: 120px 60px 80px;
+  }
+  
+  .project__back {
+    width: 60px;
+    height: 60px;
+    left: 60px;
+    top: 150px;
+  }
+  
+  .project__category {
+    font-size: 80px;
+  }
+  
+  .project__subtitle {
+    font-size: 40px;
+  }
+  
+  .project__description p {
+    font-size: 32px;
+  }
+  
+  .project__tools-label {
+    font-size: 32px;
+  }
+  
+  .project__storyboard {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .project__cta {
+    gap: 100px;
+  }
+  
+  .project__gallery-overlap {
+    min-height: 600px;
+  }
+  
+  .project__tool--large {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    padding: 80px 20px 60px;
+  }
+  
+  .project__back {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .project__header {
+    margin-bottom: 30px;
+  }
+  
+  .project__category {
+    font-size: 32px;
+    left: 0 !important;
+  }
+  
+  .project__subtitle {
+    font-size: 20px;
+    left: 0 !important;
+  }
+  
+  .project__subtitle--interactive {
+    font-size: 18px;
+  }
+  
+  .project__poster {
+    max-width: 100%;
+  }
+  
+  .project__description {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  
+  .project__description p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .project__tools {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  
+  .project__tools-label {
+    font-size: 18px;
+  }
+  
+  .project__tools-list {
+    gap: 20px;
+  }
+  
+  .project__tool {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .project__storyboard {
+    padding: 0;
+    margin-bottom: 40px;
+    gap: 30px;
+  }
+  
+  .project__storyboard-item {
+    max-width: 100%;
+  }
+  
+  .project__decor--bamboo,
+  .project__decor--flower {
+    display: none;
+  }
+  
+  .project__cta {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+  }
+  
+  .project__cta-flower {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .project__cta-btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+  
+  .project__gallery-overlap {
+    position: relative;
+    min-height: auto;
+  }
+  
+  .project__gallery-img {
+    position: relative;
+    width: 100% !important;
+    max-width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    margin-bottom: 20px;
+  }
+  
+  .project__hero--2d3d .project__header {
+    padding-left: 0;
+  }
+  
+  .project__hero--2d3d .project__category,
+  .project__hero--2d3d .project__subtitle {
+    text-align: center !important;
+    left: 0 !important;
+  }
+  
+  .project__tool--large {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+

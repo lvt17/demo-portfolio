@@ -1,0 +1,553 @@
+/* ===== ANIMATIONS CSS ===== */
+/* Inspired by Vietnamese culture - flowing, organic, spiritual */
+
+/* ===== KEYFRAMES ===== */
+
+/* Fade In animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Dragon Float - organic flowing motion */
+@keyframes dragonFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-20px) rotate(0.5deg);
+  }
+}
+
+/* Lotus Bloom - flower opening effect */
+@keyframes lotusBloom {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+}
+
+/* Gentle Rotate - for flower patterns */
+@keyframes gentleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse Glow - spiritual glow effect */
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 231, 171, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 231, 171, 0.6));
+  }
+}
+
+/* Shimmer - light flowing across text */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Float - gentle up and down */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Sway - like bamboo in wind */
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Wave - flowing wave motion */
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Scale In - zoom in effect */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Text Reveal - character by character */
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotateX(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+/* Lantern Swing */
+@keyframes lanternSwing {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+
+/* ===== ANIMATION CLASSES ===== */
+
+/* Scroll Reveal - elements start hidden */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays for sequential reveals */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+
+/* ===== ELEMENT-SPECIFIC ANIMATIONS ===== */
+
+/* Dragon - continuous floating */
+.philosophy__dragon {
+  animation: dragonFloat 8s ease-in-out infinite;
+}
+
+/* Lotus flowers - bloom on hover */
+.hero__lotus {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hero__lotus:hover {
+  animation: lotusBloom 1s ease-in-out;
+}
+
+/* Flower patterns - gentle continuous rotation */
+.philosophy__flower img,
+.project__cta-flower img {
+  animation: gentleRotate 20s linear infinite;
+}
+
+.philosophy__lang-toggle img {
+  animation: gentleRotate 15s linear infinite reverse;
+  transition: transform 0.3s ease;
+}
+
+.philosophy__lang-toggle:hover img {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+/* Lanterns - swinging effect */
+.gallery-preview__lanterns {
+  transform-origin: top center;
+  animation: lanternSwing 4s ease-in-out infinite;
+}
+
+/* Gallery items - hover effects */
+.gallery-preview__project {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-preview__project:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery grid items */
+.gallery__item {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery__item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Mirror text shimmer effect */
+.philosophy__quote .mirror {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Buttons - pulse glow */
+.btn,
+.project__cta-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover,
+.project__cta-btn:hover {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+/* Navigation links */
+.nav__link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #86ff86, #ffe7ab);
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after,
+.nav__link--active::after {
+  width: 100%;
+}
+
+/* Footer links */
+.footer__link {
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer__link:hover {
+  color: #86ff86;
+  transform: translateY(-2px);
+}
+
+/* Tool icons - float on hover */
+.project__tool,
+.about-contact__item-icon {
+  transition: transform 0.4s ease;
+}
+
+.project__tool:hover,
+.about-contact__item-icon:hover {
+  animation: float 1s ease-in-out infinite;
+}
+
+/* Back button */
+.project__back {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project__back:hover {
+  border-color: #86ff86;
+}
+
+/* Bamboo sway */
+.about-hero__bamboo img,
+.project__decor--bamboo img {
+  transform-origin: bottom center;
+  animation: sway 6s ease-in-out infinite;
+}
+
+/* Temple subtle float */
+.about-hero__temple {
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Scrolling text wave */
+.about-hero__scrolling-text {
+  animation: wave 30s linear infinite;
+}
+
+
+/* ===== PAGE LOAD ANIMATIONS ===== */
+
+/* Hero section entrance */
+.hero__content {
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.hero__lotus {
+  animation: fadeIn 1.2s ease forwards, float 6s ease-in-out infinite;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+.hero__lotus--small {
+  animation-delay: 0.8s;
+}
+
+/* Header entrance */
+.header {
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+/* Philosophy section */
+.philosophy__title {
+  animation: fadeInLeft 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.philosophy__quote {
+  animation: fadeIn 1s ease forwards;
+}
+
+
+/* ===== PARALLAX HELPER CLASSES ===== */
+
+.parallax-slow {
+  will-change: transform;
+}
+
+.parallax-medium {
+  will-change: transform;
+}
+
+.parallax-fast {
+  will-change: transform;
+}
+
+
+/* ===== LOADING ANIMATION ===== */
+
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page-loader__content {
+  text-align: center;
+}
+
+.page-loader__logo {
+  width: 100px;
+  animation: pulseGlow 1.5s ease-in-out infinite, float 2s ease-in-out infinite;
+}
+
+.page-loader__text {
+  color: #fff;
+  font-family: 'Handjet', sans-serif;
+  font-size: 24px;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease infinite alternate;
+}
+
+
+/* ===== CURSOR EFFECTS ===== */
+
+/* Custom cursor - main dot */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffe7ab;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, opacity 0.15s ease, width 0.2s ease, height 0.2s ease;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.cursor.cursor--hover {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 231, 171, 0.1);
+}
+
+.cursor.cursor--click {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Cursor trail dot */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #ffe7ab;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor,
+  .cursor-dot {
+    display: none !important;
+  }
+}
+
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+  }
+}
+

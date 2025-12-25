@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - DoraChann Portfolio</title>
+  <meta name="description" content="Khám phá các dự án của Dora-Thuỳ Dung - Sound Design, 2D&3D Design, Interactive Code, Virtual Reality">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="page-loader__content">
+      <img src="assets/images/logo.png" alt="Loading..." class="page-loader__logo">
+      <p class="page-loader__text">Đang tải...</p>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/images/logo.png" alt="DoraChann Logo">
+      </a>
+      
+      <div class="nav__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="about.html" class="nav__link">ABOUT ME</a></li>
+        <li><a href="gallery.html" class="nav__link nav__link--active">GALLERY</a></li>
+      </ul>
+    </nav>
+    <div class="nav__divider"></div>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__bg">
+      <img src="assets/images/curtain.png" alt="" class="gallery__curtain gallery__curtain--left">
+      <img src="assets/images/curtain.png" alt="" class="gallery__curtain gallery__curtain--right">
+    </div>
+    
+    <img src="assets/images/bamboo.png" alt="Bamboo" class="gallery__bamboo">
+    <img src="assets/images/bamboo-about.png" alt="Bamboo" class="gallery__bamboo-decor gallery__bamboo-decor--center">
+    
+    <div class="gallery__content">
+      <div class="gallery__categories">
+        <a href="pages/sound-design.html" class="gallery__category">SOUND DESIGN</a>
+        <a href="pages/2d3d-design.html" class="gallery__category">2D&3D DESIGN</a>
+        <a href="pages/interactive-code.html" class="gallery__category">INTERACTIVE CODE</a>
+        <a href="pages/virtual-reality.html" class="gallery__category">VIRTUAL REALITY</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__top">
+      <nav class="footer__nav">
+        <a href="index.html" class="footer__link">HOME</a>
+        <a href="about.html" class="footer__link">ABOUT ME</a>
+        <a href="gallery.html" class="footer__link">GALLERY</a>
+      </nav>
+      
+      <div class="footer__brand">
+        <img src="assets/images/logo.png" alt="DoraChann Logo" class="footer__logo">
+        <span class="footer__name">DORADORA</span>
+      </div>
+    </div>
+    
+    <div class="footer__divider"></div>
+    
+    <div class="footer__contact">
+      <span class="footer__contact-label">CONTACT:</span>
+      <span class="footer__contact-item"><a href="mailto:thdung2004@gmail.com">thdung2004@gmail.com</a></span>
+      <span class="footer__contact-item">0961180503</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
