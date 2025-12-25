@@ -3,15 +3,19 @@
 
 // ===== PAGE LOADER =====
 document.addEventListener('DOMContentLoaded', () => {
+  const loader = document.querySelector('.page-loader');
+  
   // Hide loader after page is fully loaded
   window.addEventListener('load', () => {
-    const loader = document.querySelector('.page-loader');
     if (loader) {
       setTimeout(() => {
         loader.classList.add('loaded');
-      }, 500);
+      }, 300);
     }
   });
+  
+  // Page transition on link click
+  initPageTransition(loader);
   
   // Initialize all animations and features
   initNavigation();
@@ -27,6 +31,38 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('%cBridging Vietnamese tradition with digital art', 'font-size: 14px; color: #9B4DCA;');
   console.log('%c💡 Tip: Click the flower on the right to switch languages!', 'font-size: 12px; color: #ADFF2F;');
 });
+
+// ===== PAGE TRANSITION =====
+function initPageTransition(loader) {
+  // Add transition effect when navigating to internal links
+  document.querySelectorAll('a').forEach(link => {
+    const href = link.getAttribute('href');
+    
+    // Only apply to internal links (not external, not anchors, not javascript)
+    if (href && 
+        !href.startsWith('http') && 
+        !href.startsWith('#') && 
+        !href.startsWith('mailto:') && 
+        !href.startsWith('tel:') &&
+        !href.startsWith('javascript:')) {
+      
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Show loader with transition
+        if (loader) {
+          loader.classList.remove('loaded');
+          loader.classList.add('transitioning');
+        }
+        
+        // Navigate after short delay for smooth transition
+        setTimeout(() => {
+          window.location.href = href;
+        }, 250);
+      });
+    }
+  });
+}
 
 
 // ===== NAVIGATION =====
