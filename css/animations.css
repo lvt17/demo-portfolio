@@ -1,5 +1,35 @@
 /* ===== ANIMATIONS CSS ===== */
 /* Inspired by Vietnamese culture - flowing, organic, spiritual */
+/* Optimized for GPU acceleration */
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+/* Use GPU-accelerated properties: transform, opacity, filter */
+/* Avoid animating: width, height, top, left, margin, padding */
+
+.animate-element,
+.philosophy__dragon img,
+.hero__lotus,
+.gallery__bamboo,
+.gallery__bamboo-decor,
+.about-hero__bamboo img,
+.about-me__flower {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* ===== KEYFRAMES ===== */
 
@@ -497,6 +527,7 @@
   transition: transform 0.15s ease, opacity 0.15s ease, width 0.2s ease, height 0.2s ease;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
+  will-change: transform, width, height;
 }
 
 .cursor.cursor--hover {

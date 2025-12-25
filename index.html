@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DoraChann Portfolio - Vietnamese Digital Art</title>
   <meta name="description" content="Portfolio của Dora-Thuỳ Dung - Kết nối văn hóa truyền thống Việt Nam với nghệ thuật số hiện đại">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="assets/images/hero-bg.png" as="image">
+  <link rel="preload" href="assets/images/logo.png" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
@@ -71,7 +78,7 @@
     </button>
     
     <div class="philosophy__dragon">
-      <img src="assets/images/dragon.png" alt="Vietnamese Dragon - Rồng Việt Nam">
+      <img src="assets/images/dragon.png" alt="Vietnamese Dragon - Rồng Việt Nam" loading="lazy">
     </div>
     
     <div class="philosophy__content">
@@ -106,7 +113,7 @@
 
   <!-- Gallery Preview Section (HOME 3) -->
   <section class="gallery-preview" id="gallery-preview">
-    <img src="assets/images/lanterns.png" alt="Vietnamese Lanterns" class="gallery-preview__lanterns">
+    <img src="assets/images/lanterns.png" alt="Vietnamese Lanterns" class="gallery-preview__lanterns" loading="lazy">
     
     <div class="gallery-preview__slogans">
       <div class="gallery-preview__slogan-text gallery-preview__slogan-text--1">
@@ -133,16 +140,16 @@
     
     <div class="gallery-preview__projects">
       <a href="pages/interactive-code.html" class="gallery-preview__project">
-        <img src="assets/images/cung-tat-nien.png" alt="Cúng Tất Niên - Interactive Joss Paper">
+        <img src="assets/images/cung-tat-nien.png" alt="Cúng Tất Niên - Interactive Joss Paper" loading="lazy">
         <span class="gallery-preview__project-label">Tap the josspaper to continue the ceremony</span>
       </a>
       
       <a href="pages/2d3d-design.html" class="gallery-preview__project gallery-preview__project--main">
-        <img src="assets/images/queen-mother.png" alt="Queen Mother - 2D & 3D Design">
+        <img src="assets/images/queen-mother.png" alt="Queen Mother - 2D & 3D Design" loading="lazy">
       </a>
       
       <a href="pages/sound-design.html" class="gallery-preview__project">
-        <img src="assets/images/boogeyman-poster.png" alt="The Boogeyman - Sound Design">
+        <img src="assets/images/boogeyman-poster.png" alt="The Boogeyman - Sound Design" loading="lazy">
         <span class="gallery-preview__project-label">BOOGEYMAN</span>
       </a>
     </div>

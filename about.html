@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - DoraChann Portfolio</title>
   <meta name="description" content="Tìm hiểu về Dora-Thuỳ Dung - Sinh viên Thiết kế Đồ họa RMIT, kết nối văn hóa Việt Nam với nghệ thuật số">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="assets/images/temple.png" as="image">
+  <link rel="preload" href="assets/images/logo.png" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/animations.css">
@@ -60,18 +67,18 @@
   <!-- About Me Section (ABOUT 2) -->
   <section class="about-me" id="about-me">
     <!-- Frame decorations at 4 corners of section -->
-    <img src="assets/images/frame-decor.png" alt="" class="about-me__frame about-me__frame--top-left">
-    <img src="assets/images/frame-decor.png" alt="" class="about-me__frame about-me__frame--top-right">
-    <img src="assets/images/frame-decor.png" alt="" class="about-me__frame about-me__frame--bottom-left">
-    <img src="assets/images/frame-decor.png" alt="" class="about-me__frame about-me__frame--bottom-right">
+    <img src="assets/images/frame-decor.png" alt="" class="about-me__frame about-me__frame--top-left" loading="lazy">
+    <img src="assets/images/frame-decor.png" alt="" class="about-me__frame about-me__frame--top-right" loading="lazy">
+    <img src="assets/images/frame-decor.png" alt="" class="about-me__frame about-me__frame--bottom-left" loading="lazy">
+    <img src="assets/images/frame-decor.png" alt="" class="about-me__frame about-me__frame--bottom-right" loading="lazy">
     
     <div class="about-me__container">
       <div class="about-me__image-wrapper">
         <div class="about-me__photo">
-          <img src="assets/images/personal-photo.png" alt="Dora-Thuỳ Dung">
+          <img src="assets/images/personal-photo.png" alt="Dora-Thuỳ Dung" loading="lazy">
         </div>
         
-        <img src="assets/images/peony-flower.png" alt="Peony Flower" class="about-me__flower">
+        <img src="assets/images/peony-flower.png" alt="Peony Flower" class="about-me__flower" loading="lazy">
       </div>
       
       <div class="about-me__content">
