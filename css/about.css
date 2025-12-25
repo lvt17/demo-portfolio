@@ -4,6 +4,12 @@
 .about-page {
   overflow-x: hidden;
   max-width: 100vw;
+  width: 100%;
+}
+
+.about-page * {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* ===== ABOUT HERO (TEMPLE SECTION) ===== */
@@ -468,22 +474,28 @@ aspect-ratio: 409/624;
   }
   
   .about-me {
-    padding: 60px 15px;
+    padding: 40px 20px;
     overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .about-me__container {
     flex-direction: column;
     align-items: center;
+    width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
   }
   
   .about-me__image-wrapper {
     flex: none;
-    width: 100%;
-    max-width: 250px;
+    width: 200px;
+    max-width: 200px;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: center;
   }
   
   .about-me__photo {
@@ -493,17 +505,11 @@ aspect-ratio: 409/624;
   }
   
   .about-me__frame {
-    width: 80px;
-    height: 80px;
+    display: none;
   }
   
   .about-me__flower {
     display: none;
-  }
-  
-  .about-me__image-wrapper {
-    display: flex;
-    justify-content: center;
   }
   
   .about-me__content {
@@ -511,42 +517,32 @@ aspect-ratio: 409/624;
     max-width: 100%;
     padding: 0;
     box-sizing: border-box;
-    overflow-wrap: break-word;
-  }
-  
-  .about-me__bio,
-  .about-me__covenant-text {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
   }
   
   .about-me__label {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
   }
   
   .about-me__name {
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
   }
   
   .about-me__bio {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
-  }
-  
-  .about-me__content {
-    text-align: center;
+    line-height: 1.5;
   }
   
   .about-me__tools {
     justify-content: center;
+    flex-wrap: wrap;
   }
   
   .about-me__tool {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   
   .about-me__covenant {
@@ -554,13 +550,14 @@ aspect-ratio: 409/624;
   }
   
   .about-me__covenant-title {
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
   }
   
   .about-me__covenant-text {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
+    line-height: 1.6;
   }
   
   .about-contact__container {
