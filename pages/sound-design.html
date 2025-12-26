@@ -110,13 +110,21 @@
         <div class="project__cta-flower">
           <img src="../assets/images/flower-yellow.png" alt="">
         </div>
-        <a href="../sound/sound1.ogg" target="_blank" class="project__cta-btn">Click to hear the sound!</a>
+        <button class="project__cta-btn project__sound-btn" data-sound="sound1">
+          <span class="sound-btn__text">Click to hear the sound!</span>
+          <span class="sound-btn__playing">Playing... (click to stop)</span>
+        </button>
+        <audio id="sound1" src="../sound/sound1.ogg" preload="auto"></audio>
       </div>
       <div class="project__cta-item">
         <div class="project__cta-flower">
           <img src="../assets/images/flower-yellow.png" alt="">
         </div>
-        <a href="../sound/sound2.ogg" target="_blank" class="project__cta-btn">Click to hear the sound!</a>
+        <button class="project__cta-btn project__sound-btn" data-sound="sound2">
+          <span class="sound-btn__text">Click to hear the sound!</span>
+          <span class="sound-btn__playing">Playing... (click to stop)</span>
+        </button>
+        <audio id="sound2" src="../sound/sound2.ogg" preload="auto"></audio>
       </div>
     </section>
   </main>
@@ -147,5 +155,38 @@
 
   <script src="../js/main.js"></script>
   <script src="../js/cursor.js"></script>
+  <script>
+    // Sound player functionality
+    document.querySelectorAll('.project__sound-btn').forEach(btn => {
+      const soundId = btn.dataset.sound;
+      const audio = document.getElementById(soundId);
+      
+      btn.addEventListener('click', () => {
+        // Stop all other sounds first
+        document.querySelectorAll('audio').forEach(a => {
+          if (a.id !== soundId) {
+            a.pause();
+            a.currentTime = 0;
+            a.parentElement.querySelector('.project__sound-btn').classList.remove('playing');
+          }
+        });
+        
+        // Toggle current sound
+        if (audio.paused) {
+          audio.play();
+          btn.classList.add('playing');
+        } else {
+          audio.pause();
+          audio.currentTime = 0;
+          btn.classList.remove('playing');
+        }
+      });
+      
+      // Reset button when audio ends
+      audio.addEventListener('ended', () => {
+        btn.classList.remove('playing');
+      });
+    });
+  </script>
 </body>
 </html>

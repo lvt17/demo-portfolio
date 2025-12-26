@@ -241,12 +241,37 @@
   text-decoration: none;
   padding: 18px 40px;
   border-radius: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .project__cta-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(255, 231, 171, 0.5);
+}
+
+/* Sound button states */
+.project__sound-btn .sound-btn__playing {
+  display: none;
+}
+
+.project__sound-btn.playing {
+  background-color: #7cfc00;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.project__sound-btn.playing .sound-btn__text {
+  display: none;
+}
+
+.project__sound-btn.playing .sound-btn__playing {
+  display: inline;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
 }
 
 /* ===== 2D&3D DESIGN PAGE ===== */
