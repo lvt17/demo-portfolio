@@ -471,6 +471,15 @@ aspect-ratio: 409/624;
     padding: 0 15px !important;
     max-width: 200px !important;
   }
+
+  .about-hero__temple {
+    width: 350px !important;
+    max-width: 130% !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
   
   .about-hero__scrolling-text {
     font-size: 18px !important;

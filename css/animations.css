@@ -279,11 +279,12 @@
 
 /* Lotus flowers - bloom on hover */
 .hero__lotus {
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition: filter 0.5s ease;
 }
 
 .hero__lotus:hover {
-  animation: lotusBloom 1s ease-in-out;
+  filter: brightness(1.2) drop-shadow(0 0 20px rgba(255, 200, 150, 0.6));
+  /* Keep float animation, just add glow effect */
 }
 
 /* Flower patterns - gentle continuous rotation */
