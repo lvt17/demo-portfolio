@@ -42,8 +42,8 @@
 
 .about-hero__bamboo {
   position: absolute;
-  height: 130%;
-  top: -15%;
+  height: 100%;
+  bottom: 0;
   z-index: 2;
 }
 
