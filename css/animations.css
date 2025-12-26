@@ -103,6 +103,25 @@
   }
 }
 
+/* Dragon Noise - subtle vibration effect from old/style.css */
+@keyframes dragonNoise {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2px) rotate(0.15deg);
+  }
+  50% {
+    transform: translateY(1px) rotate(-0.15deg);
+  }
+  75% {
+    transform: translateY(-1px) rotate(0.1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
 /* Lotus Bloom - flower opening effect */
 @keyframes lotusBloom {
   0% {
@@ -272,9 +291,9 @@
 
 /* ===== ELEMENT-SPECIFIC ANIMATIONS ===== */
 
-/* Dragon - continuous floating */
+/* Dragon - subtle noise vibration */
 .philosophy__dragon {
-  animation: dragonFloat 8s ease-in-out infinite;
+  animation: dragonNoise 6s ease-in-out infinite;
 }
 
 /* Lotus flowers - bloom on hover */
