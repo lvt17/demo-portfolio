@@ -303,10 +303,10 @@
 }
 
 /* Lanterns - swinging effect */
-.gallery-preview__lanterns {
+/* .gallery-preview__lanterns {
   transform-origin: top center;
   animation: lanternSwing 4s ease-in-out infinite;
-}
+} */
 
 /* Gallery items - hover effects */
 .gallery-preview__project {

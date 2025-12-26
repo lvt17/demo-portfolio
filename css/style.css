@@ -569,7 +569,7 @@ line-height: normal;
   gap: 40px;
   margin-top: -200px;
   position: relative;
-  z-index: 3;
+  z-index: 1;
   padding: 0 106px;
 }
 
