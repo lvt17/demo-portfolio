@@ -106,7 +106,7 @@
 }
 
 .project__decor--bamboo {
-  left: 200;
+  left: 400;
   top: 300px;
   width: 400px;
   transform: scaleX(-1) rotate(2deg);
@@ -120,8 +120,9 @@
 
 .project__decor--flower {
   right: 100px;
-  top: 400px;
+  top: 500px;
   width: 350px;
+  transform: scaleX(-1) rotate(2deg);
   z-index: 2;
 }
 

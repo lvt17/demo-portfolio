@@ -75,6 +75,27 @@
   color: var(--color-white);
   text-shadow: 0 0 30px rgba(138, 43, 226, 0.8);
   line-height: 1.2;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+/* Subtle color flicker animation for title */
+@keyframes titleGlow {
+  0%, 100% {
+    color: var(--color-white);
+    text-shadow: 0 0 30px rgba(138, 43, 226, 0.8);
+  }
+  25% {
+    color: #fff5f5;
+    text-shadow: 0 0 35px rgba(255, 0, 255, 0.6), 0 0 60px rgba(138, 43, 226, 0.4);
+  }
+  50% {
+    color: #f5f5ff;
+    text-shadow: 0 0 40px rgba(0, 206, 209, 0.5), 0 0 70px rgba(173, 255, 47, 0.3);
+  }
+  75% {
+    color: #fff8f0;
+    text-shadow: 0 0 35px rgba(253, 85, 148, 0.6), 0 0 60px rgba(138, 43, 226, 0.4);
+  }
 }
 
 /* Scrolling text - BEHIND temple (z-index: 3) */
@@ -418,9 +439,9 @@ aspect-ratio: 409/624;
 
 .about-contact__dragon {
   position: absolute;
-  right: -200px;
-  bottom: 0;
-  width: 70%;
+  right: -300px;
+  bottom: -150px;
+  width: 40%;
   max-width: 1554px;
   z-index: 5;
 }
