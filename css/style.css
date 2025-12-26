@@ -993,21 +993,57 @@ body {
   
   .philosophy {
     padding: 80px 40px;
+    min-height: auto;
   }
   
   .philosophy__dragon {
     max-width: 100%;
+    top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .philosophy__title {
+    font-size: 48px;
+  }
+  
+  .philosophy__quote p {
+    font-size: 28px;
+  }
+  
+  .philosophy__quote .mirror {
+    font-size: 20px;
   }
   
   .philosophy__content {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    padding-right: 0;
   }
   
-  .philosophy__top-left,
+  .philosophy__lang-toggle {
+    width: 120px;
+    height: 120px;
+    right: 20px;
+  }
+  
+  .philosophy__bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .philosophy__bottom-left {
+    align-items: center;
+  }
+  
   .philosophy__bottom-right {
     max-width: 100%;
+    text-align: center;
+  }
+  
+  .philosophy__quote--second {
+    text-align: center;
+  }
+  
+  .philosophy__attribution {
     text-align: center;
   }
   
