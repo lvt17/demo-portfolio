@@ -438,8 +438,8 @@ aspect-ratio: 409/624;
 
 .about-contact__dragon {
   position: absolute;
-  right: -300px;
-  bottom: -150px;
+  right: -60px;
+  bottom: -20px;
   width: 40%;
   max-width: 1554px;
   z-index: 5;
