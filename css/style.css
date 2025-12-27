@@ -600,6 +600,12 @@ line-height: normal;
     align-items: center;
     justify-content: center;
     transform: rotate(180deg);
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+  
+  .philosophy__flower:hover {
+    transform: rotate(180deg) scale(1.1);
   }
 
   .philosophy__flower img {
