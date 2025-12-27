@@ -1285,174 +1285,257 @@ body {
   }
   
   /* === PHILOSOPHY MOBILE: Layout chính xác theo Figma === */
-  /* Frame: 440x956px, background black */
-  /* Dragon: 168x382px -> xoay 90 độ thành 382x168px (vertical, đầu hướng lên) */
-  /* Layout: Button trên cùng, Dragon vertical bên trái, Text bên phải */
+  /* Frame: 440x956px -> Scaled to 375px width (scale: 0.852) */
+  /* Background: #000 */
+  /* All elements use absolute positioning */
   .philosophy {
-    padding: 50px 15px 50px;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: var(--color-black);
     position: relative;
+    width: 100%;
+    min-height: 814px; /* Scaled: 956 * 0.852 = 814px */
+    background: #000;
+    padding: 0;
   }
   
-  /* Language toggle button ở trên cùng bên phải */
+  /* English version button - Figma: left: 121px, top: 160px, w: 298px, h: 42px */
+  /* Scaled: left: 103px, top: 136px, w: 254px, h: 36px */
   .philosophy__lang-toggle {
     position: absolute;
-    right: 15px;
-    top: 15px;
-    transform: none;
-    width: 50px;
-    height: 50px;
+    left: 27.5%; /* 103/375 = 27.5% */
+    top: 136px;
+    width: 254px;
+    height: 36px;
+    background: #FFE7AB;
+    border-radius: 20px;
+    border: none;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 10;
+    cursor: pointer;
+  }
+  
+  .philosophy__lang-toggle-text {
+    color: #000;
+    font-family: 'Handjet', monospace;
+    font-size: 14px; /* Scaled: 16 * 0.852 = 14px */
+    font-weight: 600;
+    line-height: normal;
+    white-space: nowrap;
   }
   
   .philosophy__lang-toggle:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   
   .philosophy__lang-toggle::after {
-    bottom: -25px;
-    font-size: 10px;
-    opacity: 1;
+    display: none;
   }
   
-  /* Container cho dragon và content - flex row */
-  .philosophy__dragon-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
-    margin-top: 20px;
-  }
-  
-  /* Dragon xoay 90 độ, vertical, đầu hướng lên trên */
-  /* Original: 168x382px -> Rotated: 382x168px (height x width) */
+  /* Dragon - Figma: left: calc(50% - 125px), top: 236px */
+  /* User specified: width: 382px, height: 168px, transform: rotate(90deg), aspect-ratio: 191/84 */
+  /* Scaled position: left: calc(50% - 107px), top: 201px */
   .philosophy__dragon {
-    position: relative;
-    width: 38%; /* Giữ width như cũ */
-    max-width: 38%;
-    min-width: 38%;
-    flex-shrink: 0;
-    align-self: flex-start;
+    position: absolute;
+    left: calc(50% - 107px);
+    top: 201px;
+    width: 382px;
+    height: 168px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
   }
   
   .philosophy__dragon img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 325px; /* Scaled từ 382px */
+    width: 382px;
+    height: 168px;
+    aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
-    transform: rotate(90deg); /* Xoay 90 độ, đầu hướng lên */
+    transform: rotate(90deg);
     transform-origin: center center;
   }
   
-  /* Content ở bên phải - 60% width */
-  .philosophy__content {
-    padding-right: 0;
-    width: 60%;
-    max-width: 60%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  /* ĐỐI VỚI TÔI... - Figma: Handjet 40px, weight 600, line-height 44.7px, LEFT */
+  /* Title "ĐỐI VỚI TÔI..." - Figma: left: 204px, top: 273px, w: 183px */
+  /* User: font-size: 40px, font-weight: 600, width: 183px */
+  /* Scaled: left: 174px, top: 233px, w: 156px, font-size: 34px */
   .philosophy__title {
-    font-size: 34px; /* Scaled: 40 * (375/440) = 34px */
-    margin-bottom: 15px; /* Spacing to first quote */
-    text-align: left;
-    line-height: 38px; /* Scaled: 44.7 * (375/440) = 38px */
-    font-weight: 600;
+    position: absolute;
+    left: 174px;
+    top: 233px;
+    width: 156px;
+    color: #FFF;
     font-family: 'Handjet', monospace;
-  }
-  
-  /* Philosophy quotes - layout vertical */
-  .philosophy__quote {
-    margin-bottom: 12px;
-  }
-  
-  /* Quotes - Figma: Handjet 24px, weight 500, line-height 26.8px, LEFT */
-  .philosophy__quote p {
-    font-size: 20px; /* Scaled: 24 * (375/440) = 20px */
+    font-size: 34px; /* Scaled: 40 * 0.852 = 34px */
+    font-weight: 600;
+    line-height: normal;
     text-align: left;
-    line-height: 23px; /* Scaled: 26.8 * (375/440) = 23px */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Quote 1 - Figma: left: 204px, top: 349px, w: 200px */
+  /* User: font-size: 24px, font-weight: 500, width: 200px */
+  /* Scaled: left: 174px, top: 297px, w: 170px, font-size: 20px */
+  .philosophy__quote--first {
+    position: absolute;
+    left: 174px;
+    top: 297px;
+    width: 170px;
+    color: #FFF;
+    font-family: 'Handjet', monospace;
+    font-size: 20px; /* Scaled: 24 * 0.852 = 20px */
     font-weight: 500;
-    font-family: 'Handjet', monospace;
-    margin-bottom: 4px;
-  }
-  
-  .philosophy__quote .mirror {
-    font-size: 14px;
-    top: -6px;
+    line-height: normal;
     text-align: left;
-    display: block;
-    margin-top: 2px;
+    margin: 0;
+    padding: 0;
   }
   
-  /* Bottom section - button và quote 2 */
-  .philosophy__bottom {
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
-    width: 100%;
-    align-items: flex-start;
+  /* Mirror 1 - Figma: left: 195px, top: 403px, w: 234.745px, h: 60.297px */
+  /* User: color: #41D9FF, font-size: 20px, font-weight: 200, italic, width: 234.745px, height: 60.297px */
+  /* Scaled: left: 166px, top: 343px, w: 200px, h: 51px, font-size: 17px */
+  .philosophy__mirror--first {
+    position: absolute;
+    left: 166px;
+    top: 343px;
+    width: 200px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleY(-1); /* Mirror vertically */
   }
   
-  .philosophy__bottom-left {
-    align-items: flex-start;
-    width: 100%;
-    flex-direction: row;
-    gap: 12px;
+  .philosophy__mirror--first p {
+    color: #41D9FF;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px; /* Scaled: 20 * 0.852 = 17px */
+    font-style: italic;
+    font-weight: 200;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
   }
   
-  /* Flower - Figma: 106x108px */
-  .philosophy__flower {
-    width: 90px; /* Scaled: 106 * (375/440) = 90px */
-    height: 92px; /* Scaled: 108 * (375/440) = 92px */
-    margin-bottom: 0;
-    flex-shrink: 0;
-  }
-  
-  /* CTA Button "Read more about me" */
-  .philosophy__cta {
-    margin-top: 0;
-    text-align: left;
-  }
-  
-  .philosophy__cta .btn {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 20px;
-  }
-  
+  /* Quote 2 - Figma: left: 179px, top: 494px, w: 225px */
+  /* User: font-size: 24px, font-weight: 500, width: 225px */
+  /* Scaled: left: 153px, top: 421px, w: 192px, font-size: 20px */
   .philosophy__quote--second {
-    text-align: left;
-    margin-top: 0;
-  }
-  
-  .philosophy__quote--second .mirror {
-    text-align: left;
-  }
-  
-  /* Attribution - Figma: Handjet 16px, weight 500, line-height 17.9px, CENTER */
-  .philosophy__attribution {
-    text-align: center;
-    font-size: 14px; /* Scaled: 16 * (375/440) = 14px */
-    margin-top: 10px;
-    line-height: 15px; /* Scaled: 17.9 * (375/440) = 15px */
-    font-weight: 500;
+    position: absolute;
+    left: 153px;
+    top: 421px;
+    width: 192px;
+    color: #FFF;
     font-family: 'Handjet', monospace;
+    font-size: 20px; /* Scaled: 24 * 0.852 = 20px */
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Mirror 2 - Figma: left: 163px, top: 596px, w: 242px, h: 65px */
+  /* User: color: #FF71E7, font-size: 20px, font-weight: 200, italic, width: 242px, height: 65px */
+  /* Scaled: left: 139px, top: 508px, w: 206px, h: 55px, font-size: 17px */
+  .philosophy__mirror--second {
+    position: absolute;
+    left: 139px;
+    top: 508px;
+    width: 206px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleY(-1); /* Mirror vertically */
+  }
+  
+  .philosophy__mirror--second p {
+    color: #FF71E7;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px; /* Scaled: 20 * 0.852 = 17px */
+    font-style: italic;
+    font-weight: 200;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Attribution - Figma: left: 232.5px (center), top: 682px, w: 341px */
+  /* User: font-size: 16px, font-weight: 500, text-align: center, width: 341px */
+  /* Scaled: left: 50%, top: 581px, w: 291px, font-size: 14px, transform: translateX(-50%) */
+  .philosophy__attribution {
+    position: absolute;
+    left: 50%;
+    top: 581px;
+    width: 291px;
+    transform: translateX(-50%);
+    color: #FFF;
+    text-align: center;
+    font-family: 'Handjet', monospace;
+    font-size: 14px; /* Scaled: 16 * 0.852 = 14px */
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Flower - Figma: left: 42px, top: 771px, w: 106px, h: 108px, rotate 180deg */
+  /* User: width: 106px, height: 108px, aspect-ratio: 53/54 */
+  /* Scaled: left: 36px, top: 657px, w: 90px, h: 92px */
+  .philosophy__flower {
+    position: absolute;
+    left: 36px;
+    top: 657px;
+    width: 90px;
+    height: 92px;
+    aspect-ratio: 53 / 54;
+    transform: rotate(180deg);
+  }
+  
+  .philosophy__flower img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* CTA Button "Read more about me" - Figma: left: 160px, top: 804px, w: 167px, h: 42px */
+  /* User: border-radius: 20px, background: #FFE7AB, width: 167px, height: 42px */
+  /* Text: color: #000, font-size: 16px, font-weight: 600 */
+  /* Scaled: left: 136px, top: 685px, w: 142px, h: 36px, font-size: 14px */
+  .philosophy__cta {
+    position: absolute;
+    left: 136px;
+    top: 685px;
+    width: 142px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .philosophy__cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #FFE7AB;
+    border-radius: 20px;
+    color: #000;
+    font-family: 'Handjet', monospace;
+    font-size: 14px; /* Scaled: 16 * 0.852 = 14px */
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .philosophy__cta-btn:hover {
+    transform: scale(1.05);
   }
   
   /* === GALLERY PREVIEW MOBILE: Layout chính xác theo Figma === */
