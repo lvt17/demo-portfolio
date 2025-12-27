@@ -5,14 +5,14 @@
 :root {
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-cream: #FFF5E1;
+  --color-cream: #FFE7AB; /* Updated from Figma */
   --color-pink: #fd5594;
   --color-pink-light: #e88a96;
   --color-green-light: #d8ffd8;
   --color-purple: #7B2D8E;
   --color-purple-light: #9B4DCA;
-  --color-cyan: #00CED1;
-  --color-magenta: #FF00FF;
+  --color-cyan: #41D9FF; /* Updated from Figma */
+  --color-magenta: #FF71E7; /* Updated from Figma */
   --color-lime: #ADFF2F;
   
   --font-pixel: 'VT323', monospace;
