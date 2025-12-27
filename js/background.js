@@ -130,13 +130,118 @@ const backgroundSketch = (p) => {
 
 // Initialize when DOM is ready (only once)
 let bgInitialized = false;
+let bg2Initialized = false;
 
 function initBackground() {
-  if (bgInitialized) return;
-  const container = document.getElementById("bg-canvas-hero");
-  if (container && typeof p5 !== 'undefined') {
-    new p5(backgroundSketch);
-    bgInitialized = true;
+  // Initialize for home-1
+  if (!bgInitialized) {
+    const container = document.getElementById("bg-canvas-hero");
+    if (container && typeof p5 !== 'undefined') {
+      new p5(backgroundSketch);
+      bgInitialized = true;
+    }
+  }
+  
+  // Initialize for home-2
+  if (!bg2Initialized) {
+    const container2 = document.getElementById("bg-canvas-hero-2");
+    if (container2 && typeof p5 !== 'undefined') {
+      // Create a new sketch instance for home-2
+      const sketch2 = (p) => {
+        // Copy all the sketch code but target bg-canvas-hero-2
+        let strips = [];
+        let isMobile = false;
+        let isTablet = false;
+        
+        function detectDevice() {
+          isMobile = p.windowWidth <= 576;
+          isTablet = p.windowWidth > 576 && p.windowWidth <= 1024;
+        }
+        
+        function setupByDevice() {
+          if (isMobile) {
+            p.stripCount = 8;
+            p.stripWidth = p.windowWidth / p.stripCount;
+          } else if (isTablet) {
+            p.stripCount = 12;
+            p.stripWidth = p.windowWidth / p.stripCount;
+          } else {
+            p.stripCount = 16;
+            p.stripWidth = p.windowWidth / p.stripCount;
+          }
+        }
+        
+        function generateStrips() {
+          strips = [];
+          for (let i = 0; i < p.stripCount; i++) {
+            strips.push(new Strip(p, i * p.stripWidth, p.stripWidth));
+          }
+        }
+        
+        class Strip {
+          constructor(p, x, w) {
+            this.p = p;
+            this.x = x;
+            this.w = w;
+            this.speed = p.random(0.5, 2);
+            this.offset = p.random(1000);
+          }
+          
+          update() {
+            this.offset += this.speed;
+          }
+          
+          display() {
+            const p = this.p;
+            for (let y = 0; y < p.windowHeight; y += 10) {
+              const noise = p.noise(this.x * 0.01, (y + this.offset) * 0.01);
+              const hue = p.map(noise, 0, 1, 280, 320);
+              const sat = p.map(noise, 0, 1, 40, 80);
+              const bri = p.map(noise, 0, 1, 70, 95);
+              const alpha = p.map(noise, 0, 1, 60, 100);
+              p.fill(hue, sat, bri, alpha);
+              p.rect(this.x, y, this.w, 3);
+            }
+          }
+        }
+        
+        p.setup = () => {
+          const container = document.getElementById("bg-canvas-hero-2");
+          if (!container) return;
+          
+          const c = p.createCanvas(p.windowWidth, p.windowHeight);
+          c.parent("bg-canvas-hero-2");
+          
+          p.colorMode(p.HSB, 360, 100, 100, 100);
+          p.noStroke();
+          
+          detectDevice();
+          setupByDevice();
+          generateStrips();
+        };
+        
+        p.draw = () => {
+          p.background(210, 30, 95);
+          strips.forEach(s => {
+            s.update();
+            s.display();
+          });
+        };
+        
+        p.windowResized = () => {
+          const container = document.getElementById("bg-canvas-hero-2");
+          if (!container) return;
+          
+          p.resizeCanvas(p.windowWidth, p.windowHeight);
+          detectDevice();
+          setupByDevice();
+          generateStrips();
+        };
+      };
+      
+      new p5(sketch2);
+      bg2Initialized = true;
+    }
   }
 }
 
