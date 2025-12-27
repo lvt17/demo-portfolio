@@ -445,6 +445,7 @@ line-height: normal;
 .philosophy__dragon img {
   width: 100%;
   height: auto;
+  transform: none; /* Default - will be overridden in mobile */
 }
 
 .philosophy__content {
