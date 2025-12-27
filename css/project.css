@@ -107,17 +107,18 @@
 }
 
 .project__decor--bamboo {
-  right: -500;
+  right: -200px;
   top: 300px;
   width: 400px;
-  transform: scaleX(-1) rotate(2deg);
+  transform: scaleX(-1) rotate(2deg) translateX(100px);
   z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  opacity: 0.3;
+  transition: all 0.6s ease-out;
 }
 
 .project__hero:hover .project__decor--bamboo {
-  opacity: 1;
+  opacity: 0.9;
+  transform: scaleX(-1) rotate(2deg) translateX(0);
 }
 
 .project__decor--bamboo img {
@@ -126,17 +127,18 @@
 }
 
 .project__decor--flower {
-  right: 100px;
+  right: 200px;
   top: 500px;
   width: 350px;
-  transform: scaleX(-1) rotate(2deg);
+  transform: scaleX(-1) rotate(2deg) translateX(150px);
   z-index: 2;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  opacity: 0.3;
+  transition: all 0.6s ease-out;
 }
 
 .project__hero:hover .project__decor--flower {
-  opacity: 1;
+  opacity: 0.9;
+  transform: scaleX(-1) rotate(2deg) translateX(0);
 }
 
 .project__decor--flower img {
