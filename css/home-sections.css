@@ -225,29 +225,35 @@
   }
   
   .home-1__content {
-    padding: 0;
-    top: 0;
+    padding: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
     width: 100%;
     max-width: 100%;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-right: 20px;
-    padding-top: 0; /* Will use absolute positioning */
     position: relative;
+    min-height: 100vh;
+  }
+  
+  .home-1__portfolio {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
   }
   
   /* DoraChann - Figma: left 394px (with translate-x-[-100%] = right align) */
   /* Frame: 440px, right = 440 - 394 = 46px */
   /* Scaled: right = 46 * 0.852 = 39px, top = 261 * 0.852 = 222px */
   .home-1__name {
-    position: absolute;
-    right: 39px; /* Scaled: (440 - 394) * 0.852 = 39px */
-    top: 222px; /* Scaled: 261 * 0.852 = 222px */
-    font-size: 55px; /* Scaled: 64 * 0.852 = 55px */
+    position: absolute !important;
+    right: 39px !important; /* Scaled: (440 - 394) * 0.852 = 39px */
+    top: 222px !important; /* Scaled: 261 * 0.852 = 222px - relative to section */
+    left: auto !important;
+    font-size: 55px !important; /* Scaled: 64 * 0.852 = 55px */
     font-weight: 300;
     line-height: 61px; /* Scaled: 71.5 * 0.852 = 61px */
     text-align: right;
-    margin-bottom: 0;
+    margin: 0 !important;
     width: auto;
   }
   
@@ -260,14 +266,15 @@
   /* Frame: 440px, right = 440 - 399 = 41px */
   /* Scaled: right = 41 * 0.852 = 35px, top = 318 * 0.852 = 271px */
   .home-1__title {
-    position: absolute;
-    right: 35px; /* Scaled: (440 - 399) * 0.852 = 35px */
-    top: 271px; /* Scaled: 318 * 0.852 = 271px */
-    font-size: 109px; /* Scaled: 128 * 0.852 = 109px */
+    position: absolute !important;
+    right: 35px !important; /* Scaled: (440 - 399) * 0.852 = 35px */
+    top: 271px !important; /* Scaled: 318 * 0.852 = 271px - relative to section */
+    left: auto !important;
+    font-size: 109px !important; /* Scaled: 128 * 0.852 = 109px */
     font-weight: 600;
     line-height: 122px; /* Scaled: 143 * 0.852 = 122px */
     text-align: right;
-    margin-top: 0;
+    margin: 0 !important;
     width: auto;
   }
   
@@ -302,69 +309,75 @@
   }
   
   .home-2__content {
-    padding: 0;
-    top: 0;
+    padding: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
     width: 100%;
     max-width: 100%;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 0;
-    padding-top: 0;
     position: relative;
+    min-height: 100vh;
   }
   
   /* WELCOME container - needs to be relative for absolute children */
   .home-2__welcome {
     position: relative;
     width: 100%;
-    height: 100%;
-    min-height: 500px; /* Enough space for all elements */
+    min-height: 100vh;
   }
   
   .home-2__welcome .welcome {
     font-weight: 600;
     display: block;
-    position: absolute;
-    left: 88px; /* Scaled: 103 * 0.852 = 88px */
-    top: 243px; /* Scaled: 285 * 0.852 = 243px */
-    margin: 0;
+    position: absolute !important;
+    left: 88px !important; /* Scaled: 103 * 0.852 = 88px */
+    top: 243px !important; /* Scaled: 285 * 0.852 = 243px - relative to section */
+    margin: 0 !important;
+    font-size: 55px !important; /* Scaled: 64 * 0.852 = 55px */
+    line-height: 61px;
+    color: #FFF;
   }
   
   /* TO - Figma: left 205px, top 342px, font-size 64px, weight 600, LEFT */
   /* Scaled: left 175px, top 291px */
   .home-2__welcome .to {
-    font-size: 55px;
+    font-size: 55px !important;
     font-weight: 600;
     display: block;
-    position: absolute;
-    left: 175px; /* Scaled: 205 * 0.852 = 175px */
-    top: 291px; /* Scaled: 342 * 0.852 = 291px */
-    margin: 0;
+    position: absolute !important;
+    left: 175px !important; /* Scaled: 205 * 0.852 = 175px */
+    top: 291px !important; /* Scaled: 342 * 0.852 = 291px - relative to section */
+    margin: 0 !important;
+    color: #FFF;
+    line-height: 61px;
   }
   
   /* my - Figma: left 255px, top 342px, font-size 64px, Bilbo Swash Caps, LEFT */
   /* Scaled: left 217px, top 291px */
   .home-2__welcome .my {
-    font-size: 55px;
+    font-size: 55px !important;
     font-family: "Bilbo Swash Caps";
     display: block;
-    position: absolute;
-    left: 217px; /* Scaled: 255 * 0.852 = 217px */
-    top: 291px; /* Scaled: 342 * 0.852 = 291px */
-    margin: 0;
+    position: absolute !important;
+    left: 217px !important; /* Scaled: 255 * 0.852 = 217px */
+    top: 291px !important; /* Scaled: 342 * 0.852 = 291px - relative to section */
+    margin: 0 !important;
+    color: #FFF;
+    line-height: 61px;
   }
   
   /* Vietnameseland - Figma: left 51px, top 399px, font-size 64px, weight 300, LEFT */
   /* Scaled: left 43px, top 340px */
   .home-2__welcome .land {
-    font-size: 55px;
+    font-size: 55px !important;
     font-weight: 300;
     display: block;
-    position: absolute;
-    left: 43px; /* Scaled: 51 * 0.852 = 43px */
-    top: 340px; /* Scaled: 399 * 0.852 = 340px */
+    position: absolute !important;
+    left: 43px !important; /* Scaled: 51 * 0.852 = 43px */
+    top: 340px !important; /* Scaled: 399 * 0.852 = 340px - relative to section */
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 0;
+    margin: 0 !important;
+    color: #FFF;
+    line-height: 61px;
   }
   
   .home-2__lotus {
