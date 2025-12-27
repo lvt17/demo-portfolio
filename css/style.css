@@ -1480,15 +1480,16 @@ body {
     padding: 0;
   }
   
-  /* Attribution - Figma: left: 232.5px (center), top: 682px, w: 341px */
+  /* Attribution - Figma: left: 232.5px, top: 682px, w: 341px */
   /* User: font-size: 16px, font-weight: 500, text-align: center, width: 341px */
-  /* Scaled: left: 50%, top: 581px, w: 291px, font-size: 14px, transform: translateX(-50%) */
+  /* Scaled: left: 198px, top: 581px, w: 291px, font-size: 14px */
+  /* Note: 232.5px in 440px frame = center, but we use exact pixel value */
   .philosophy__attribution {
     position: absolute;
-    left: 50%;
-    top: 581px;
-    width: 291px;
-    transform: translateX(-50%);
+    left: 198px; /* Scaled from 232.5px (center in 440px frame) */
+    top: 581px; /* Scaled from 682px */
+    width: 291px; /* Scaled from 341px */
+    transform: none; /* Remove translateX since we use exact left value */
     color: #FFF;
     text-align: center;
     font-family: 'Handjet', monospace;
