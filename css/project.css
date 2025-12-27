@@ -107,7 +107,7 @@
 }
 
 .project__decor--bamboo {
-  right: 300px;
+  right: 400px;
   top: 400px;
   width: 400px;
   transform: scaleX(-1) rotate(2deg) translateX(0);
@@ -118,7 +118,7 @@
 
 .project__hero:hover .project__decor--bamboo {
   opacity: 0.9;
-  transform: scaleX(-1) rotate(2deg) translateX(500px);
+  transform: scaleX(-1) rotate(2deg) translateX(470px);
 }
 
 .project__decor--bamboo img {
@@ -127,7 +127,7 @@
 }
 
 .project__decor--flower {
-  right: 200px;
+  right: 250px;
   top: 500px;
   width: 350px;
   transform: scaleX(-1) rotate(2deg) translateX(150px);
