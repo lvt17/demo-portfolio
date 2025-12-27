@@ -1304,7 +1304,7 @@ body {
   /* Scaled: left: 103px, top: 136px, w: 254px, h: 36px */
   .philosophy__lang-toggle {
     position: absolute;
-    left: 27.5%; /* 103/375 = 27.5% */
+    left: 103px; /* Fixed from Figma scaled */
     top: 136px;
     width: 254px;
     height: 36px;
