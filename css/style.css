@@ -374,7 +374,7 @@ line-height: normal;
   position: relative;
 }
 
-/* Language toggle button (flower on right side) */
+/* Language toggle button (flower on right side) - Desktop only */
 .philosophy__lang-toggle {
   position: absolute;
   right: 100px;
@@ -387,6 +387,13 @@ line-height: normal;
   cursor: pointer;
   z-index: 10;
   transition: transform 0.5s ease;
+}
+
+/* Reset for mobile - will be overridden in @media query */
+@media (max-width: 576px) {
+  .philosophy__lang-toggle {
+    transform: none !important;
+  }
 }
 
 /* Tooltip hint */
