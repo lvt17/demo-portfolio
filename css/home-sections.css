@@ -311,7 +311,9 @@
   
   /* === HOME 2: WELCOME TO my Vietnameseland (Left Align) === */
   /* Figma Design 78:167 - Frame: 440x956px */
+  /* Show home-2 on mobile (hidden on desktop) */
   .home-2 {
+    display: block !important;
     min-height: 100vh;
     position: relative;
     padding: 0;
