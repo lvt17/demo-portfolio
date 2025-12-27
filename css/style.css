@@ -1373,12 +1373,12 @@ body {
   }
   
   .philosophy__dragon img {
-    width: 326px; /* Scaled: 382 * 0.852 = 326px */
-    height: 143px; /* Scaled: 168 * 0.852 = 143px */
+    width: 326px !important; /* Scaled: 382 * 0.852 = 326px - override desktop */
+    height: 143px !important; /* Scaled: 168 * 0.852 = 143px - override desktop */
     aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
-    transform: rotate(90deg);
+    transform: rotate(90deg) !important; /* Override desktop - MUST rotate 90deg */
     transform-origin: center center;
   }
   
