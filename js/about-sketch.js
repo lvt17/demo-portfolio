@@ -5,7 +5,7 @@ const aboutSketch = (p) => {
   let spacing = 100;
 
   p.preload = () => {
-    img = p.loadImage("../assets/images/pattern-old-coin.png");
+    img = p.loadImage("assets/images/pattern-old-coin.png");
   };
 
   p.setup = () => {

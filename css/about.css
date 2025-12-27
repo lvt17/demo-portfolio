@@ -202,7 +202,7 @@
 
 #bg-canvas-about canvas {
   display: block;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
 .about-me__wrapper {
@@ -215,6 +215,8 @@
   display: flex;
   gap: 80px;
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
 }
 
 .about-me__image-wrapper {
