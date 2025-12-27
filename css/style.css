@@ -1144,104 +1144,121 @@ body {
     font-size: 24px;
   }
   
-  /* === HOME MOBILE: Layout theo Figma === */
+  /* === HOME MOBILE: Layout chính xác theo Figma === */
+  /* Frame: 440x956px -> Scale to mobile (375px width) */
   .hero {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: relative;
-    padding: 100px 20px 80px;
+    padding: 80px 20px 60px;
+    overflow: hidden;
   }
   
   .hero__content {
     flex-direction: column;
     padding: 0;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     position: relative;
     top: 0;
     width: 100%;
     max-width: 100%;
-    gap: 30px;
+    gap: 0;
   }
   
-  /* DoraChann Portfolio ở trên */
+  /* === PART 1: DoraChann Portfolio (home1) === */
+  /* DoraChann: Figma pos(166, 261) = 37.7% left, 27.3% top, RIGHT align */
   .hero__portfolio {
     order: 1;
-    text-align: center;
+    text-align: right;
     margin-bottom: 0;
     position: relative;
     top: 0;
+    width: 100%;
+    padding-right: 20px;
+    margin-top: 60px; /* ~27% of 956px */
   }
   
-  /* DoraChann - từ Figma: Handjet 64px, weight 300, line-height 71.5px */
+  /* DoraChann - Figma: 64px, weight 300, line-height 71.5px, RIGHT */
   .hero__name {
-    font-size: 55px; /* Scaled from 64px (440px frame -> 375px screen) */
-    margin-bottom: 8px;
+    font-size: 55px; /* Scaled: 64 * (375/440) = 55px */
+    margin-bottom: 15px; /* Spacing to PortfoLio: ~57px scaled */
     font-weight: 300;
-    line-height: 61px; /* Scaled from 71.5px */
-    text-align: center;
+    line-height: 61px; /* Scaled: 71.5 * (375/440) = 61px */
+    text-align: right;
+    font-family: 'Handjet', monospace;
   }
   
-  /* PortfoLio - từ Figma: Handjet 128px, weight 600, line-height 143px */
+  /* PortfoLio - Figma: 128px, weight 600, line-height 143px, RIGHT */
+  /* Position: Figma pos(41, 318) = 9.3% left, 33.3% top */
   .hero__title {
-    font-size: 109px; /* Scaled from 128px */
+    font-size: 109px; /* Scaled: 128 * (375/440) = 109px */
     margin-bottom: 0;
     font-weight: 600;
-    line-height: 122px; /* Scaled from 143px */
-    text-align: center;
+    line-height: 122px; /* Scaled: 143 * (375/440) = 122px */
+    text-align: right;
+    font-family: 'Handjet', monospace;
   }
   
-  /* WELCOME TO my Vietnameseland ở dưới */
+  /* === PART 2: WELCOME TO my Vietnameseland (home2) === */
+  /* WELCOME: Figma pos(103, 285) = 23.4% left, 29.8% top, LEFT align */
   .hero__text {
     order: 2;
-    margin-top: 0;
+    margin-top: 40px; /* Spacing from Portfolio */
+    width: 100%;
+    padding-left: 20px;
   }
   
-  /* WELCOME - từ Figma: Handjet 64px, weight 600, line-height 71.5px */
+  /* WELCOME - Figma: 64px, weight 600, line-height 71.5px, LEFT */
   .hero__welcome {
-    font-size: 55px; /* Scaled from 64px */
+    font-size: 55px; /* Scaled: 64 * (375/440) = 55px */
     opacity: 1;
     transform: none;
     animation: none;
     margin-top: 0;
-    line-height: 61px; /* Scaled from 71.5px */
-    text-align: center;
+    line-height: 61px; /* Scaled: 71.5 * (375/440) = 61px */
+    text-align: left;
+    font-family: 'Handjet', monospace;
   }
   
   .hero__welcome span:first-child {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 0;
     font-weight: 600;
   }
   
-  /* TO - từ Figma: Handjet 64px, weight 600 */
+  /* TO - Figma: 64px, weight 600, LEFT, pos(205, 342) */
   .hero__welcome .to {
-    right: 0;
     display: inline;
-    margin-right: 6px;
-    font-size: 55px; /* Scaled from 64px */
+    margin-left: 8px; /* Spacing from WELCOME */
+    margin-right: 6px; /* Spacing to my */
+    font-size: 55px;
     font-weight: 600;
+    font-family: 'Handjet', monospace;
   }
   
-  /* my - từ Figma: Bilbo Swash Caps 64px, weight 400, line-height 80px */
+  /* my - Figma: Bilbo Swash Caps 64px, weight 400, line-height 80px, LEFT */
   .hero__welcome .my {
-    font-size: 55px; /* Scaled from 64px */
-    right: 0;
+    font-size: 55px;
     display: inline;
-    margin-left: 6px;
+    margin-left: 0;
+    margin-right: 0;
     font-weight: 400;
-    line-height: 68px; /* Scaled from 80px */
+    line-height: 68px; /* Scaled: 80 * (375/440) = 68px */
+    font-family: 'Bilbo Swash Caps', cursive;
   }
   
-  /* Vietnameseland - từ Figma: Handjet 64px, weight 300, line-height 71.5px */
+  /* Vietnameseland - Figma: 64px, weight 300, line-height 71.5px, LEFT */
+  /* Position: Figma pos(51, 399) = 11.6% left, 41.7% top */
   .hero__welcome .land {
-    font-size: 55px; /* Scaled from 64px */
+    font-size: 55px;
     display: block;
-    margin-top: 8px;
+    margin-top: 12px; /* Spacing from "my" */
     font-weight: 300;
-    line-height: 61px; /* Scaled from 71.5px */
+    line-height: 61px;
+    font-family: 'Handjet', monospace;
   }
   
   /* Lotus flowers ở bottom - 2 bông hoa */
@@ -1267,24 +1284,28 @@ body {
     transform: scale(1.15);
   }
   
-  /* === PHILOSOPHY MOBILE: Layout theo Figma - Dragon bên trái, text bên phải === */
+  /* === PHILOSOPHY MOBILE: Layout chính xác theo Figma === */
+  /* Frame: 440x956px, background black */
+  /* Dragon: 168x382px (38% width), ở bên trái */
   .philosophy {
-    padding: 60px 20px 60px;
+    padding: 60px 15px 60px;
     min-height: auto;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 15px;
+    gap: 12px; /* Spacing giữa dragon và content */
     background: var(--color-black);
   }
   
-  /* Dragon ở bên trái, vertical */
+  /* Dragon ở bên trái - Figma: 168px width trong 440px frame = 38.2% */
+  /* Position: pos(11, 236) = 2.5% từ trái, 24.7% từ trên */
   .philosophy__dragon {
     position: relative;
     top: 0;
     margin-bottom: 0;
-    width: 40%;
-    max-width: 40%;
+    width: 38%;
+    max-width: 38%;
+    min-width: 38%;
     order: 1;
     flex-shrink: 0;
     align-self: flex-start;
@@ -1297,7 +1318,8 @@ body {
     display: block;
   }
   
-  /* Content ở bên phải */
+  /* Content ở bên phải - 60% width */
+  /* Title position: pos(204, 273) = 46.4% từ trái, 28.6% từ trên */
   .philosophy__content {
     padding-right: 0;
     width: 60%;
@@ -1309,11 +1331,11 @@ body {
   /* Language toggle button ở trên cùng */
   .philosophy__lang-toggle {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 15px;
+    top: 15px;
     transform: none;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 0;
     display: block;
     z-index: 10;
@@ -1330,25 +1352,28 @@ body {
     opacity: 1;
   }
   
-  /* ĐỐI VỚI TÔI... - từ Figma: Handjet 40px, weight 600, line-height 44.7px */
+  /* ĐỐI VỚI TÔI... - Figma: Handjet 40px, weight 600, line-height 44.7px, LEFT */
+  /* Position: pos(204, 273) = 46.4% từ trái, 28.6% từ trên */
   .philosophy__title {
-    font-size: 34px; /* Scaled from 40px */
-    margin-bottom: 20px;
+    font-size: 34px; /* Scaled: 40 * (375/440) = 34px */
+    margin-bottom: 20px; /* Spacing to first quote: 76px scaled = 65px */
     text-align: left;
-    line-height: 38px; /* Scaled from 44.7px */
+    line-height: 38px; /* Scaled: 44.7 * (375/440) = 38px */
     font-weight: 600;
+    font-family: 'Handjet', monospace;
   }
   
   .philosophy__quote {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
-  /* Quotes - từ Figma: Handjet 24px, weight 500, line-height 26.8px */
+  /* Quotes - Figma: Handjet 24px, weight 500, line-height 26.8px, LEFT */
   .philosophy__quote p {
-    font-size: 20px; /* Scaled from 24px */
+    font-size: 20px; /* Scaled: 24 * (375/440) = 20px */
     text-align: left;
-    line-height: 23px; /* Scaled from 26.8px */
+    line-height: 23px; /* Scaled: 26.8 * (375/440) = 23px */
     font-weight: 500;
+    font-family: 'Handjet', monospace;
   }
   
   .philosophy__quote .mirror {
@@ -1360,8 +1385,8 @@ body {
   
   .philosophy__bottom {
     flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 15px;
+    margin-top: 25px;
     width: 100%;
     align-items: flex-start;
   }
@@ -1370,12 +1395,13 @@ body {
     align-items: flex-start;
     width: 100%;
     flex-direction: row;
-    gap: 15px;
+    gap: 12px;
   }
   
+  /* Flower - Figma: 106x108px */
   .philosophy__flower {
-    width: 80px;
-    height: 80px;
+    width: 90px; /* Scaled: 106 * (375/440) = 90px */
+    height: 92px; /* Scaled: 108 * (375/440) = 92px */
     margin-bottom: 0;
     flex-shrink: 0;
   }
@@ -1393,13 +1419,14 @@ body {
     text-align: left;
   }
   
-  /* Attribution - từ Figma: Handjet 16px, weight 500, line-height 17.9px */
+  /* Attribution - Figma: Handjet 16px, weight 500, line-height 17.9px, CENTER */
   .philosophy__attribution {
-    text-align: left;
-    font-size: 14px; /* Scaled from 16px */
+    text-align: center;
+    font-size: 14px; /* Scaled: 16 * (375/440) = 14px */
     margin-top: 12px;
-    line-height: 15px; /* Scaled from 17.9px */
+    line-height: 15px; /* Scaled: 17.9 * (375/440) = 15px */
     font-weight: 500;
+    font-family: 'Handjet', monospace;
   }
   
   /* Gallery preview layout - keep all elements together */
