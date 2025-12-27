@@ -1,0 +1,508 @@
+{
+  "name": "HOME2",
+  "type": "FRAME",
+  "width": 440,
+  "height": 956,
+  "x": 3755,
+  "y": -1082,
+  "fills": [
+    {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 1
+      }
+    }
+  ],
+  "strokes": [],
+  "effects": [],
+  "opacity": 1,
+  "fontFamily": null,
+  "fontSize": null,
+  "fontWeight": null,
+  "letterSpacing": null,
+  "lineHeight": null,
+  "textAlign": null,
+  "padding": {
+    "top": 0,
+    "right": 0,
+    "bottom": 0,
+    "left": 0
+  },
+  "gap": null,
+  "layoutMode": null,
+  "layoutAlign": null,
+  "children": [
+    {
+      "name": "Dragon of the Trần Dynasty  2",
+      "type": "RECTANGLE",
+      "width": 168.0000166977502,
+      "height": 382.0000073435133,
+      "x": 3765.99998330225,
+      "y": -846.0000073435133,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "ecedb1f184d7711591e889b74f93adb3485fabfe"
+        }
+      ],
+      "fontFamily": null,
+      "fontSize": null,
+      "fontWeight": null,
+      "letterSpacing": null,
+      "lineHeight": null,
+      "textAlign": null,
+      "characters": null,
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "ĐỐI VỚI TÔI...",
+      "type": "TEXT",
+      "width": 183,
+      "height": 45,
+      "x": 3959,
+      "y": -809,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": "Handjet",
+      "fontSize": 40,
+      "fontWeight": 600,
+      "letterSpacing": null,
+      "lineHeight": 44.70588302612305,
+      "textAlign": "LEFT",
+      "characters": "ĐỐI VỚI TÔI...",
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Văn hoá, là nói lên bản sắc của một dân tộc.",
+      "type": "TEXT",
+      "width": 200,
+      "height": 54,
+      "x": 3959,
+      "y": -733,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": "Handjet",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "letterSpacing": null,
+      "lineHeight": 26.823528289794922,
+      "textAlign": "LEFT",
+      "characters": "Văn hoá, là nói lên bản sắc của một dân tộc.",
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Văn hoá, là nói lên bản sắc của một dân tộc.",
+      "type": "TEXT",
+      "width": 234.79238130746853,
+      "height": 60.4829369920235,
+      "x": 3950.0001817897755,
+      "y": -679.0000268357735,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.2530986964702606,
+            "g": 0.8506197333335876,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": "Inter",
+      "fontSize": 20,
+      "fontWeight": 200,
+      "letterSpacing": null,
+      "lineHeight": 24.204544067382812,
+      "textAlign": "LEFT",
+      "characters": "Văn hoá, là nói lên bản sắc của một dân tộc.",
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Văn hoá còn thì dân tộc còn, văn hoá mất thì dân tộc mất.",
+      "type": "TEXT",
+      "width": 225,
+      "height": 81,
+      "x": 3934,
+      "y": -588,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": "Handjet",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "letterSpacing": null,
+      "lineHeight": 26.823528289794922,
+      "textAlign": "LEFT",
+      "characters": "Văn hoá còn thì dân tộc còn, văn hoá mất thì dân tộc mất.",
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Văn hoá còn thì dân tộc còn, văn hoá mất thì dân tộc mất.",
+      "type": "TEXT",
+      "width": 242,
+      "height": 65,
+      "x": 3918,
+      "y": -486,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 0.4418569803237915,
+            "b": 0.9069763422012329,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": "Inter",
+      "fontSize": 20,
+      "fontWeight": 200,
+      "letterSpacing": null,
+      "lineHeight": 24.204544067382812,
+      "textAlign": "LEFT",
+      "characters": "Văn hoá còn thì dân tộc còn, văn hoá mất thì dân tộc mất.",
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Tổng Bí thư Nguyễn Phú Trọng - Hội nghị Văn hoá toàn quốc 2021",
+      "type": "TEXT",
+      "width": 341,
+      "height": 18,
+      "x": 3817,
+      "y": -400,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": "Handjet",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "letterSpacing": null,
+      "lineHeight": 17.882352828979492,
+      "textAlign": "CENTER",
+      "characters": "Tổng Bí thư Nguyễn Phú Trọng - Hội nghị Văn hoá toàn quốc 2021",
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Line 1",
+      "type": "LINE",
+      "width": 399,
+      "height": 0.00003488168783860601,
+      "x": 3775,
+      "y": -993,
+      "fills": [],
+      "fontFamily": null,
+      "fontSize": null,
+      "fontWeight": null,
+      "letterSpacing": null,
+      "lineHeight": null,
+      "textAlign": null,
+      "characters": null,
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "LOGO-WEB 1",
+      "type": "RECTANGLE",
+      "width": 40,
+      "height": 46,
+      "x": 3786,
+      "y": -1053,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "63d1aa9cb991160564b5bac8b2c964b9d4acc788"
+        }
+      ],
+      "fontFamily": null,
+      "fontSize": null,
+      "fontWeight": null,
+      "letterSpacing": null,
+      "lineHeight": null,
+      "textAlign": null,
+      "characters": null,
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "pattern2 1",
+      "type": "RECTANGLE",
+      "width": 106.00000181226687,
+      "height": 108.00001689620893,
+      "x": 3796.999998187733,
+      "y": -311.00000762939453,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a9521480d09ebb60c7b1ceb11872b7874dbdbb7d"
+        }
+      ],
+      "fontFamily": null,
+      "fontSize": null,
+      "fontWeight": null,
+      "letterSpacing": null,
+      "lineHeight": null,
+      "textAlign": null,
+      "characters": null,
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Rectangle 2",
+      "type": "RECTANGLE",
+      "width": 167,
+      "height": 42,
+      "x": 3915,
+      "y": -278,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 0.9066063761711121,
+            "b": 0.6692305207252502,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": null,
+      "fontSize": null,
+      "fontWeight": null,
+      "letterSpacing": null,
+      "lineHeight": null,
+      "textAlign": null,
+      "characters": null,
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Read more about me",
+      "type": "TEXT",
+      "width": 109,
+      "height": 18,
+      "x": 3944,
+      "y": -266,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": "Handjet",
+      "fontSize": 16,
+      "fontWeight": 600,
+      "letterSpacing": null,
+      "lineHeight": 17.882352828979492,
+      "textAlign": "LEFT",
+      "characters": "Read more about me",
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Rectangle 3",
+      "type": "RECTANGLE",
+      "width": 298,
+      "height": 42,
+      "x": 3876,
+      "y": -922,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 1,
+            "g": 0.9066063761711121,
+            "b": 0.6692305207252502,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": null,
+      "fontSize": null,
+      "fontWeight": null,
+      "letterSpacing": null,
+      "lineHeight": null,
+      "textAlign": null,
+      "characters": null,
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "English version for my international friends",
+      "type": "TEXT",
+      "width": 230,
+      "height": 18,
+      "x": 3910,
+      "y": -910,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        }
+      ],
+      "fontFamily": "Handjet",
+      "fontSize": 16,
+      "fontWeight": 600,
+      "letterSpacing": null,
+      "lineHeight": 17.882352828979492,
+      "textAlign": "LEFT",
+      "characters": "English version for my international friends ",
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    },
+    {
+      "name": "Menu",
+      "type": "RECTANGLE",
+      "width": 38,
+      "height": 38,
+      "x": 4123,
+      "y": -1049,
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FIT",
+          "imageRef": "925c1456d466fd828f10b2f0649c51f59b04e831"
+        }
+      ],
+      "fontFamily": null,
+      "fontSize": null,
+      "fontWeight": null,
+      "letterSpacing": null,
+      "lineHeight": null,
+      "textAlign": null,
+      "characters": null,
+      "layoutMode": null,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "itemSpacing": null
+    }
+  ]
+}
