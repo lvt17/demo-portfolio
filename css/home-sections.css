@@ -296,23 +296,22 @@
     animation: float 6s ease-in-out infinite;
   }
   
-  /* Lotus Left - Figma: left -19px, top 503px, width 292px, height 521px */
-  /* Scaled: left -16px, top 429px, width 249px, height 444px */
+  /* Lotus Left - Increased 20%: width 249px -> 299px */
   .home-1__lotus--left {
-    left: -16px !important; /* Scaled: -19 * 0.852 = -16px */
-    top: 429px !important; /* Scaled: 503 * 0.852 = 429px */
-    width: 249px !important; /* Scaled: 292 * 0.852 = 249px */
+    left: -16px !important;
+    bottom: -100px !important;
+    top: auto !important;
+    width: 299px !important; /* 249px * 1.2 = 299px */
     height: auto;
     animation-delay: -2s;
   }
   
-  /* Lotus Right - Figma: left 283px, top 670px, width 176px, height 313px */
-  /* Scaled: left 241px, top 571px, width 150px, height 267px */
-  /* Or use: right = 375 - 241 = 134px */
+  /* Lotus Right - Increased 20%: width 150px -> 180px */
   .home-1__lotus--right {
-    left: 241px !important; /* Scaled: 283 * 0.852 = 241px */
-    top: 571px !important; /* Scaled: 670 * 0.852 = 571px */
-    width: 150px !important; /* Scaled: 176 * 0.852 = 150px */
+    left: 241px !important;
+    bottom: -100px !important;
+    top: auto !important;
+    width: 180px !important; /* 150px * 1.2 = 180px */
     height: auto;
     right: auto !important;
   }
@@ -413,22 +412,22 @@
     animation: float 6s ease-in-out infinite;
   }
   
-  /* Lotus Left - Same as home-1: left -19px, top 503px, width 292px, height 521px */
-  /* Scaled: left -16px, top 429px, width 249px, height 444px */
+  /* Lotus Left - Increased 20%: width 249px -> 299px */
   .home-2__lotus--left {
-    left: -16px !important; /* Scaled: -19 * 0.852 = -16px */
-    top: 429px !important; /* Scaled: 503 * 0.852 = 429px */
-    width: 249px !important; /* Scaled: 292 * 0.852 = 249px */
+    left: -16px !important;
+    bottom: -100px !important;
+    top: auto !important;
+    width: 299px !important; /* 249px * 1.2 = 299px */
     height: auto;
     animation-delay: -2s;
   }
   
-  /* Lotus Right - Same as home-1: left 283px, top 670px, width 176px, height 313px */
-  /* Scaled: left 241px, top 571px, width 150px, height 267px */
+  /* Lotus Right - Increased 20%: width 150px -> 180px */
   .home-2__lotus--right {
-    left: 241px !important; /* Scaled: 283 * 0.852 = 241px */
-    top: 571px !important; /* Scaled: 670 * 0.852 = 571px */
-    width: 150px !important; /* Scaled: 176 * 0.852 = 150px */
+    left: 241px !important;
+    bottom: -100px !important;
+    top: auto !important;
+    width: 180px !important; /* 150px * 1.2 = 180px */
     height: auto;
     right: auto !important;
   }
