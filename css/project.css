@@ -6,6 +6,8 @@
   padding: 120px 80px 100px;
   position: relative;
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* Back Button */
