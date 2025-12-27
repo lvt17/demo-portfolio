@@ -445,14 +445,14 @@ line-height: normal;
 /* Desktop Philosophy Layout (min-width: 1025px) - From Figma */
 @media (min-width: 1025px) {
   .philosophy__dragon {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 310px;
-    width: 1672px;
-    height: 736px;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: 310px !important;
+    width: 1672px !important;
+    height: 736px !important;
     z-index: 2;
-    margin: 0;
+    margin: 0 !important;
   }
 
   .philosophy__dragon img {
@@ -523,8 +523,9 @@ line-height: normal;
 
   /* Desktop: Quote 2 - From Figma */
   .philosophy__quote--second {
-    position: absolute;
-    right: 108px; /* 1920 - 1812 = 108px from right */
+    position: absolute !important;
+    right: 108px !important; /* 1920 - 1812 = 108px from right */
+    left: auto !important; /* Override any left value */
     top: 1549px; /* Vietnamese: 1549px, English: 1491px (handled by JS) */
     font-family: 'Handjet', sans-serif;
     font-size: 64px;
@@ -538,8 +539,9 @@ line-height: normal;
 
   /* Desktop: Mirror 2 - From Figma */
   .philosophy__mirror--second {
-    position: absolute;
-    right: 108px; /* 1920 - 1812 = 108px from right */
+    position: absolute !important;
+    right: 108px !important; /* 1920 - 1812 = 108px from right */
+    left: auto !important; /* Override any left value */
     top: 1606px; /* Vietnamese: 1606px, English: 1670px (handled by JS) */
     height: 65px;
     width: auto;
