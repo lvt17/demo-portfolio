@@ -1480,7 +1480,7 @@ body {
   .philosophy__mirror--second {
     position: absolute;
     left: 139px;
-    top: 464px !important; /* Moved up 3px: 467px - 3px = 464px, but gap from phiso2 (421px) = 43px, need to match phiso1-mirror1 gap (46px) so 421 + 46 = 467px, then -3px = 464px */
+    top: 464px !important; /* Equal gap: phiso2 (421px) + 46px (same as phiso1-mirror1 gap) - 3px (moved up) = 464px */
     bottom: auto;
     width: 206px;
     height: 55px;
