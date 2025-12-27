@@ -291,19 +291,30 @@
   }
   
   .home-1__lotus {
-    width: 200px;
-    bottom: 10%;
+    position: absolute;
+    z-index: 4;
+    animation: float 6s ease-in-out infinite;
   }
   
+  /* Lotus Left - Figma: left -19px, top 503px, width 292px, height 521px */
+  /* Scaled: left -16px, top 429px, width 249px, height 444px */
   .home-1__lotus--left {
-    left: -19px; /* Scaled from Figma */
-    width: 292px; /* Scaled */
+    left: -16px !important; /* Scaled: -19 * 0.852 = -16px */
+    top: 429px !important; /* Scaled: 503 * 0.852 = 429px */
+    width: 249px !important; /* Scaled: 292 * 0.852 = 249px */
+    height: auto;
+    animation-delay: -2s;
   }
   
+  /* Lotus Right - Figma: left 283px, top 670px, width 176px, height 313px */
+  /* Scaled: left 241px, top 571px, width 150px, height 267px */
+  /* Or use: right = 375 - 241 = 134px */
   .home-1__lotus--right {
-    right: 283px; /* Scaled from Figma */
-    width: 176px; /* Scaled */
-    top: 670px; /* Scaled from Figma */
+    left: 241px !important; /* Scaled: 283 * 0.852 = 241px */
+    top: 571px !important; /* Scaled: 670 * 0.852 = 571px */
+    width: 150px !important; /* Scaled: 176 * 0.852 = 150px */
+    height: auto;
+    right: auto !important;
   }
   
   /* === HOME 2: WELCOME TO my Vietnameseland (Left Align) === */
@@ -397,19 +408,29 @@
   }
   
   .home-2__lotus {
-    width: 200px;
-    bottom: 10%;
+    position: absolute;
+    z-index: 4;
+    animation: float 6s ease-in-out infinite;
   }
   
+  /* Lotus Left - Same as home-1: left -19px, top 503px, width 292px, height 521px */
+  /* Scaled: left -16px, top 429px, width 249px, height 444px */
   .home-2__lotus--left {
-    left: -19px; /* Scaled from Figma */
-    width: 292px; /* Scaled */
+    left: -16px !important; /* Scaled: -19 * 0.852 = -16px */
+    top: 429px !important; /* Scaled: 503 * 0.852 = 429px */
+    width: 249px !important; /* Scaled: 292 * 0.852 = 249px */
+    height: auto;
+    animation-delay: -2s;
   }
   
+  /* Lotus Right - Same as home-1: left 283px, top 670px, width 176px, height 313px */
+  /* Scaled: left 241px, top 571px, width 150px, height 267px */
   .home-2__lotus--right {
-    right: 283px; /* Scaled from Figma */
-    width: 176px; /* Scaled */
-    top: 670px; /* Scaled from Figma */
+    left: 241px !important; /* Scaled: 283 * 0.852 = 241px */
+    top: 571px !important; /* Scaled: 670 * 0.852 = 571px */
+    width: 150px !important; /* Scaled: 176 * 0.852 = 150px */
+    height: auto;
+    right: auto !important;
   }
 }
 
