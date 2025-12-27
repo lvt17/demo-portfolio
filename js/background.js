@@ -146,80 +146,110 @@ function initBackground() {
   if (!bg2Initialized) {
     const container2 = document.getElementById("bg-canvas-home-2");
     if (container2 && typeof p5 !== 'undefined') {
-      // Create a new sketch instance for home-2 - use same background as home-1
-      const sketch2 = (p) => {
-        // Use same background sketch as home-1
+      // Use same background sketch as home-1 for home-2
+      const backgroundSketch2 = (p) => {
         let strips = [];
-        let isMobile = false;
-        let isTablet = false;
-        
+        let stripCount;
+        let speedFactor = 3;
+
+        const theme = {
+          baseHue: 280,
+          hueRange: 60,
+          saturation: 50,
+          brightness: 90
+        };
+
+        let device = "desktop";
+        let stripBase = 18;
+        let stripMin = 6;
+        let stripMax = 28;
+        let yStep = 2;
+        let speedMin = 0.001;
+        let speedMax = 0.003;
+
         function detectDevice() {
-          isMobile = p.windowWidth <= 576;
-          isTablet = p.windowWidth > 576 && p.windowWidth <= 1024;
+          const w = p.windowWidth;
+          if (w < 600) device = "mobile";
+          else if (w < 1024) device = "tablet";
+          else device = "desktop";
         }
-        
+
         function setupByDevice() {
-          if (isMobile) {
-            p.stripCount = 8;
-            p.stripWidth = p.windowWidth / p.stripCount;
-          } else if (isTablet) {
-            p.stripCount = 12;
-            p.stripWidth = p.windowWidth / p.stripCount;
+          if (device === "mobile") {
+            stripBase = 28;
+            stripMin = 16;
+            stripMax = 40;
+            yStep = 4;
+            speedMin = 0.0005;
+            speedMax = 0.0015;
+          } else if (device === "tablet") {
+            stripBase = 22;
+            stripMin = 10;
+            stripMax = 32;
+            yStep = 3;
+            speedMin = 0.0008;
+            speedMax = 0.002;
           } else {
-            p.stripCount = 16;
-            p.stripWidth = p.windowWidth / p.stripCount;
+            stripBase = 18;
+            stripMin = 6;
+            stripMax = 28;
+            yStep = 2;
+            speedMin = 0.001;
+            speedMax = 0.003;
           }
+          stripCount = p.int(p.width / stripBase);
         }
-        
+
         function generateStrips() {
           strips = [];
-          for (let i = 0; i < p.stripCount; i++) {
-            strips.push(new Strip(p, i * p.stripWidth, p.stripWidth));
+          let x = 0;
+          for (let i = 0; i < stripCount; i++) {
+            let w = p.random(stripMin, stripMax);
+            strips.push(new Strip(x, w));
+            x += w;
           }
         }
-        
+
         class Strip {
-          constructor(p, x, w) {
-            this.p = p;
+          constructor(x, w) {
             this.x = x;
             this.w = w;
-            this.speed = p.random(0.5, 2);
-            this.offset = p.random(1000);
+            this.phase = p.random(1000);
+            this.speed = p.random(speedMin, speedMax);
           }
-          
+
           update() {
-            this.offset += this.speed;
+            this.phase += this.speed * speedFactor;
           }
-          
+
           display() {
-            const p = this.p;
-            for (let y = 0; y < p.windowHeight; y += 10) {
-              const noise = p.noise(this.x * 0.01, (y + this.offset) * 0.01);
-              const hue = p.map(noise, 0, 1, 280, 320);
-              const sat = p.map(noise, 0, 1, 40, 80);
-              const bri = p.map(noise, 0, 1, 70, 95);
-              const alpha = p.map(noise, 0, 1, 60, 100);
+            for (let y = 0; y < p.height; y += yStep) {
+              let n = p.noise(this.x * 0.01, y * 0.005, this.phase);
+              let hue = theme.baseHue + p.sin(n * p.TWO_PI) * theme.hueRange;
+              let sat = theme.saturation + n * 20;
+              let bri = theme.brightness + p.sin(this.phase + y * 0.01) * 6;
+              let alpha = 70;
               p.fill(hue, sat, bri, alpha);
               p.rect(this.x, y, this.w, 3);
             }
           }
         }
-        
+
         p.setup = () => {
           const container = document.getElementById("bg-canvas-home-2");
           if (!container) return;
-          
+
           const c = p.createCanvas(p.windowWidth, p.windowHeight);
           c.parent("bg-canvas-home-2");
-          
+
           p.colorMode(p.HSB, 360, 100, 100, 100);
           p.noStroke();
-          
+
           detectDevice();
           setupByDevice();
           generateStrips();
         };
-        
+
         p.draw = () => {
           p.background(210, 30, 95);
           strips.forEach(s => {
@@ -227,11 +257,11 @@ function initBackground() {
             s.display();
           });
         };
-        
+
         p.windowResized = () => {
           const container = document.getElementById("bg-canvas-home-2");
           if (!container) return;
-          
+
           p.resizeCanvas(p.windowWidth, p.windowHeight);
           detectDevice();
           setupByDevice();
@@ -239,7 +269,7 @@ function initBackground() {
         };
       };
       
-      new p5(sketch2);
+      new p5(backgroundSketch2);
       bg2Initialized = true;
     }
   }
