@@ -45,8 +45,14 @@
 /* Desktop: WELCOME TO my Vietnameseland (Left side) */
 .home-1__welcome-desktop {
   position: absolute;
-  left: 150px; /* calc(5% + 54px) in 1920px = 150px */
-  top: 584px; /* calc(50% + 44px) in 1080px = 584px */
+  left: 150px;
+  /* calc(5% + 54px) in 1920px = 150px */
+  top: 584px;
+  /* calc(50% + 44px) in 1080px = 584px */
+  width: 700px;
+  /* Explicit width for container */
+  height: 400px;
+  /* Explicit height for container - fits all text elements */
   z-index: 2;
 }
 
@@ -69,8 +75,10 @@
 
 .home-1__welcome-to {
   position: absolute;
-  left: 161px; /* 311px - 150px = 161px relative to WELCOME */
-  top: 129px; /* 713px - 584px = 129px relative to WELCOME */
+  left: 161px;
+  /* 311px - 150px = 161px relative to WELCOME */
+  top: 129px;
+  /* 713px - 584px = 129px relative to WELCOME */
   font-family: Handjet;
   font-weight: 600;
   font-size: 128px;
@@ -79,8 +87,10 @@
 
 .home-1__welcome-my {
   position: absolute;
-  left: 267px; /* 417px - 150px = 267px relative to WELCOME */
-  top: 129px; /* 713px - 584px = 129px relative to WELCOME */
+  left: 267px;
+  /* 417px - 150px = 267px relative to WELCOME */
+  top: 129px;
+  /* 713px - 584px = 129px relative to WELCOME */
   font-family: "Bilbo Swash Caps";
   font-size: 128px;
   font-style: normal;
@@ -89,10 +99,12 @@
 
 .home-1__welcome-land {
   position: absolute;
-  left: 35px; /* 185px - 150px = 35px relative to WELCOME */
-  top: 242px; /* 826px - 584px = 242px relative to WELCOME */
+  left: 35px;
+  /* 185px - 150px = 35px relative to WELCOME */
+  top: 242px;
+  /* 826px - 584px = 242px relative to WELCOME */
   font-family: Handjet;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 128px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   white-space: nowrap;
@@ -101,8 +113,10 @@
 .home-1__portfolio {
   text-align: right;
   position: absolute;
-  right: calc(30% - 397px); /* From Figma: left-[calc(70%+397px)] translate-x-[-100%] = right edge */
-  top: calc(33.33% + 11px); /* From Figma: top-[calc(33.33%+11px)] */
+  right: 120px;
+  /* Right side of viewport */
+  top: -200px;
+  /* Center vertically */
   z-index: 2;
 }
 
@@ -146,26 +160,32 @@
 
 .home-1__lotus {
   position: absolute;
-  bottom: -20px;
   z-index: 4;
   animation: float 6s ease-in-out infinite;
 }
 
 .home-1__lotus--left {
-  left: 20%;
-  width: 275px;
+  left: 35%;
+  /* Center-left */
+  top: 25%;
+  /* Middle of viewport */
+  width: 600px;
   animation-delay: -2s;
 }
 
 .home-1__lotus--right {
-  right: 33%;
-  width: 400px;
+  right: 15%;
+  /* Right side */
+  top: 500px;
+  /* Slightly lower */
+  width: 430px;
 }
 
 /* ===== HOME SECTION 2: WELCOME TO my Vietnameseland (Left Align) ===== */
 /* Hidden on desktop, only visible on mobile */
 .home-2 {
-  display: none; /* Hidden on desktop */
+  display: none;
+  /* Hidden on desktop */
 }
 
 .home-2__canvas-bg {
@@ -271,21 +291,17 @@
 /* ===== MOBILE STYLES (max-width: 576px) ===== */
 @media (max-width: 576px) {
   /* Scale factor: 375/440 = 0.852 */
-  
-  /* Hide desktop welcome text on mobile */
-  .home-1__welcome-desktop {
-    display: none !important;
-  }
-  
-  /* === HOME 1: DoraChann Portfolio (Right Align) === */
-  /* Figma Design 78:158 - Frame: 440x956px */
+
+  /* === HOME 1 Section: Contains both Portfolio and Welcome pages === */
+  /* Figma Design: 78:158 (Portfolio) + 78:167 (Welcome) = 2 vertical pages */
   .home-1 {
-    min-height: 100vh;
+    min-height: 200vh;
+    /* 2 pages */
     position: relative;
     padding: 0;
     overflow: hidden;
   }
-  
+
   .home-1__content {
     padding: 0 !important;
     top: 0 !important;
@@ -294,86 +310,139 @@
     max-width: 100%;
     position: relative;
     min-height: 100vh;
+    /* First page - Portfolio */
   }
-  
+
   .home-1__portfolio {
     position: relative;
     width: 100%;
-    height: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    /* First page takes full viewport */
   }
-  
+
   /* Position elements relative to section, not content container */
   .home-1__portfolio {
     position: static !important;
   }
-  
+
+  /* === WELCOME Section: Second page on mobile === */
+  /* Figma Design 78:167 - Shows after Portfolio */
+  .home-1__welcome-desktop {
+    display: block !important;
+    /* Show on mobile */
+    position: relative !important;
+    /* Flow layout, not absolute */
+    left: auto !important;
+    top: auto !important;
+    width: 100%;
+    height: 100vh;
+    /* Second page takes full viewport */
+    padding: 150px 30px 50px;
+    box-sizing: border-box;
+  }
+
+  /* Reset absolute positioning for WELCOME children on mobile */
+  .home-1__welcome-welcome,
+  .home-1__welcome-to,
+  .home-1__welcome-my,
+  .home-1__welcome-land {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    display: block;
+    font-size: 48px !important;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .home-1__welcome-my {
+    display: inline !important;
+    font-size: 48px !important;
+  }
+
+  .home-1__welcome-land {
+    margin-top: 20px;
+    font-size: 40px !important;
+  }
+
   /* DoraChann - Figma: left 394px (with translate-x-[-100%] = right align) */
   /* Frame: 440px, right = 440 - 394 = 46px */
   /* Scaled: right = 46 * 0.852 = 39px, top = 261 * 0.852 = 222px */
   .home-1__name {
     position: absolute !important;
-    right: 39px !important; /* Scaled: (440 - 394) * 0.852 = 39px */
-    top: 222px !important; /* Scaled: 261 * 0.852 = 222px - relative to .home-1 section */
+    right: 39px !important;
+    /* Scaled: (440 - 394) * 0.852 = 39px */
+    top: 222px !important;
+    /* Scaled: 261 * 0.852 = 222px - relative to .home-1 section */
     left: auto !important;
-    font-size: 55px !important; /* Scaled: 64 * 0.852 = 55px */
+    font-size: 55px !important;
+    /* Scaled: 64 * 0.852 = 55px */
     font-weight: 300;
-    line-height: 61px; /* Scaled: 71.5 * 0.852 = 61px */
+    line-height: 61px;
+    /* Scaled: 71.5 * 0.852 = 61px */
     text-align: right;
     margin: 0 !important;
     width: auto;
     z-index: 10;
   }
-  
+
   .home-1__name .chann {
     font-size: 55px;
     font-weight: 300;
   }
-  
+
   /* PortfoLio - Figma: left 399px (with translate-x-[-100%] = right align) */
   /* Frame: 440px, right = 440 - 399 = 41px */
   /* Scaled: right = 41 * 0.852 = 35px, top = 318 * 0.852 = 271px */
   .home-1__title {
     position: absolute !important;
-    right: 35px !important; /* Scaled: (440 - 399) * 0.852 = 35px */
-    top: 271px !important; /* Scaled: 318 * 0.852 = 271px - relative to .home-1 section */
+    right: 35px !important;
+    /* Scaled: (440 - 399) * 0.852 = 35px */
+    top: 271px !important;
+    /* Scaled: 318 * 0.852 = 271px - relative to .home-1 section */
     left: auto !important;
-    font-size: 109px !important; /* Scaled: 128 * 0.852 = 109px */
+    font-size: 109px !important;
+    /* Scaled: 128 * 0.852 = 109px */
     font-weight: 300 !important;
-    line-height: 122px; /* Scaled: 143 * 0.852 = 122px */
+    line-height: 122px;
+    /* Scaled: 143 * 0.852 = 122px */
     text-align: right;
     margin: 0 !important;
     width: auto;
     z-index: 10;
   }
-  
+
   .home-1__title .fo {
     font-size: 109px;
     font-family: "Bilbo Swash Caps";
   }
-  
+
   .home-1__lotus {
     position: absolute;
     z-index: 4;
     animation: float 6s ease-in-out infinite;
   }
-  
+
   /* Lotus Left - Increased 20% total: width 249px -> 301px, moved left 15px more */
   .home-1__lotus--left {
-    left: -36px !important; /* -21px - 15px = -36px */
-    width: 301px !important; /* 274px * 1.1 = 301px (total 20% increase) */
+    left: -36px !important;
+    /* -21px - 15px = -36px */
+    width: 301px !important;
+    /* 274px * 1.1 = 301px (total 20% increase) */
     height: auto;
     animation-delay: -2s;
   }
-  
+
   /* Lotus Right - Increased 20% total: width 150px -> 182px, moved left 15px more */
   .home-1__lotus--right {
-    left: 216px !important; /* 231px - 15px = 216px */
-    width: 182px !important; /* 165px * 1.1 = 182px (total 20% increase) */
+    left: 216px !important;
+    /* 231px - 15px = 216px */
+    width: 182px !important;
+    /* 165px * 1.1 = 182px (total 20% increase) */
     height: auto;
     right: auto !important;
   }
-  
+
   /* === HOME 2: WELCOME TO my Vietnameseland (Left Align) === */
   /* Figma Design 78:167 - Frame: 440x956px */
   /* Show home-2 on mobile (hidden on desktop) */
@@ -384,42 +453,46 @@
     padding: 0;
     overflow: hidden;
   }
-  
+
   .home-2__content {
     padding: 0 !important;
     top: 0 !important;
     margin: 0 !important;
     width: 100%;
     max-width: 100%;
-    position: static !important; /* Static so children position relative to .home-2 */
+    position: static !important;
+    /* Static so children position relative to .home-2 */
     min-height: 0;
   }
-  
+
   /* Position elements relative to section, not content container */
   .home-2__text {
     position: static !important;
   }
-  
+
   /* WELCOME container - needs to be relative for absolute children */
   .home-2__welcome {
     position: relative;
     width: 100%;
     min-height: 100vh;
   }
-  
+
   .home-2__welcome .welcome {
     font-weight: 300 !important;
     display: block;
     position: absolute !important;
-    left: 88px !important; /* Scaled: 103 * 0.852 = 88px */
-    top: 243px !important; /* Scaled: 285 * 0.852 = 243px - relative to .home-2 section */
+    left: 88px !important;
+    /* Scaled: 103 * 0.852 = 88px */
+    top: 243px !important;
+    /* Scaled: 285 * 0.852 = 243px - relative to .home-2 section */
     margin: 0 !important;
-    font-size: 55px !important; /* Scaled: 64 * 0.852 = 55px */
+    font-size: 55px !important;
+    /* Scaled: 64 * 0.852 = 55px */
     line-height: 61px;
     color: #FFF;
     z-index: 10;
   }
-  
+
   /* TO - Figma: left 205px, top 342px, font-size 64px, weight 600, LEFT */
   /* Scaled: left 175px, top 291px */
   .home-2__welcome .to {
@@ -427,14 +500,16 @@
     font-weight: 300 !important;
     display: block;
     position: absolute !important;
-    left: 175px !important; /* Scaled: 205 * 0.852 = 175px */
-    top: 291px !important; /* Scaled: 342 * 0.852 = 291px - relative to .home-2 section */
+    left: 175px !important;
+    /* Scaled: 205 * 0.852 = 175px */
+    top: 291px !important;
+    /* Scaled: 342 * 0.852 = 291px - relative to .home-2 section */
     margin: 0 !important;
     color: #FFF;
     line-height: 61px;
     z-index: 10;
   }
-  
+
   /* my - Figma: left 255px, top 342px, font-size 64px, Bilbo Swash Caps, LEFT */
   /* Scaled: left 217px, top 291px */
   .home-2__welcome .my {
@@ -442,14 +517,16 @@
     font-family: "Bilbo Swash Caps";
     display: block;
     position: absolute !important;
-    left: 217px !important; /* Scaled: 255 * 0.852 = 217px */
-    top: 291px !important; /* Scaled: 342 * 0.852 = 291px - relative to .home-2 section */
+    left: 217px !important;
+    /* Scaled: 255 * 0.852 = 217px */
+    top: 291px !important;
+    /* Scaled: 342 * 0.852 = 291px - relative to .home-2 section */
     margin: 0 !important;
     color: #FFF;
     line-height: 61px;
     z-index: 10;
   }
-  
+
   /* Vietnameseland - Figma: left 51px, top 399px, font-size 64px, weight 300, LEFT */
   /* Scaled: left 43px, top 340px */
   .home-2__welcome .land {
@@ -457,35 +534,40 @@
     font-weight: 200 !important;
     display: block;
     position: absolute !important;
-    left: 43px !important; /* Scaled: 51 * 0.852 = 43px */
-    top: 340px !important; /* Scaled: 399 * 0.852 = 340px - relative to .home-2 section */
+    left: 43px !important;
+    /* Scaled: 51 * 0.852 = 43px */
+    top: 340px !important;
+    /* Scaled: 399 * 0.852 = 340px - relative to .home-2 section */
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0 !important;
     color: #FFF;
     line-height: 61px;
     z-index: 10;
   }
-  
+
   .home-2__lotus {
     position: absolute;
     z-index: 4;
     animation: float 6s ease-in-out infinite;
   }
-  
+
   /* Lotus Left - Increased 20% total: width 249px -> 301px, moved left 15px more */
   .home-2__lotus--left {
-    left: -36px !important; /* -21px - 15px = -36px */
-    width: 301px !important; /* 274px * 1.1 = 301px (total 20% increase) */
+    left: -36px !important;
+    /* -21px - 15px = -36px */
+    width: 301px !important;
+    /* 274px * 1.1 = 301px (total 20% increase) */
     height: auto;
     animation-delay: -2s;
   }
-  
+
   /* Lotus Right - Increased 20% total: width 150px -> 182px, moved left 15px more */
   .home-2__lotus--right {
-    left: 216px !important; /* 231px - 15px = 216px */
-    width: 182px !important; /* 165px * 1.1 = 182px (total 20% increase) */
+    left: 216px !important;
+    /* 231px - 15px = 216px */
+    width: 182px !important;
+    /* 165px * 1.1 = 182px (total 20% increase) */
     height: auto;
     right: auto !important;
   }
 }
-

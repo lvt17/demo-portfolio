@@ -57,22 +57,24 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Desktop layout - max 1920px width, allow scroll */
+/* Desktop layout - responsive, scales to viewport */
 @media (min-width: 1025px) {
   html {
-    max-width: 1920px;
+    width: 100%;
+    max-width: 100%;
+    /* Changed from 1920px - allows any desktop size */
     margin: 0 auto;
     overflow-x: hidden;
     overflow-y: auto;
-    /* Allow vertical scroll */
   }
 
   body {
-    max-width: 1920px;
+    width: 100%;
+    max-width: 100%;
+    /* Changed from 1920px */
     margin: 0 auto;
     overflow-x: hidden;
     overflow-y: auto;
-    /* Allow vertical scroll */
     position: relative;
   }
 }
@@ -324,7 +326,7 @@ ul {
 .hero__portfolio {
   text-align: right;
   position: relative;
-  top: -300px;
+  top: -800px;
   /* Nhích lên trên - tăng số âm để lên cao hơn */
 }
 
@@ -400,7 +402,7 @@ ul {
 .philosophy {
   min-height: 1080px;
   /* Fixed height for 1920x1080 viewport */
-  height: 1080px;
+  height: 1280px;
   /* Fixed height for desktop */
   padding: 0;
   display: block;
@@ -511,11 +513,11 @@ ul {
     position: absolute;
     left: 106px;
     /* Vietnamese: 106px, English: 140px (handled by JS) */
-    top: 710px;
-    /* Scaled: 1184 * 0.6 = 710px */
+    top: 600px;
+    /* Moved up to make room for larger text */
     font-family: 'Handjet', sans-serif;
-    font-size: 77px;
-    /* Scaled: 128 * 0.6 = 77px */
+    font-size: 128px;
+    /* From Figma */
     font-style: normal;
     font-weight: 600;
     /* semibold */
@@ -531,11 +533,11 @@ ul {
     position: absolute;
     left: 106px;
     /* Vietnamese: 106px, English: 140px (handled by JS) */
-    top: 811px;
-    /* Scaled: 1351 * 0.6 = 811px */
+    top: 750px;
+    /* Adjusted for larger title (128px) + spacing */
     font-family: 'Handjet', sans-serif;
-    font-size: 38px;
-    /* Scaled: 64 * 0.6 = 38px */
+    font-size: 64px;
+    /* From Figma */
     font-style: normal;
     font-weight: 500;
     /* medium */
@@ -549,12 +551,12 @@ ul {
   /* Desktop: Mirror 1 - From Figma - Scaled for 1920x1080 */
   .philosophy__mirror--first {
     position: absolute;
-    left: 135px;
+    left: 125px;
     /* Vietnamese: 135px, English: 169px (handled by JS) */
-    top: 845px;
-    /* Scaled: 1409 * 0.6 = 845px */
-    height: 35px;
-    /* Scaled: 58 * 0.6 = 35px */
+    top: 820px;
+    /* Adjusted for larger quote (64px) + spacing */
+    height: 50px;
+    /* Increased for 40px font */
     width: 598px;
     /* Scaled: 996 * 0.6 = 598px */
     display: flex;
@@ -562,12 +564,14 @@ ul {
     justify-content: flex-start;
     transform: scaleY(-1);
     z-index: 3;
+    opacity: 0.5;
+    filter: blur(2px);
   }
 
   .philosophy__mirror--first p {
     font-family: 'Inter', sans-serif;
-    font-size: 29px;
-    /* Scaled: 48 * 0.6 = 29px, Vietnamese. English: 24px (handled by JS) */
+    font-size: 43px;
+    /* From Figma - English version */
     font-style: italic;
     font-weight: 200;
     /* extralight */
@@ -580,18 +584,18 @@ ul {
 
   /* Desktop: Quote 2 - From Figma - Scaled for 1920x1080 */
   .philosophy__quote--second {
-    position: absolute !important;
-    right: 108px !important;
+    position: absolute;
+    right: 108px;
     /* 1920 - 1812 = 108px from right */
-    left: auto !important;
+    left: auto;
     /* Override any left value */
-    top: 929px;
-    /* Scaled: 1549 * 0.6 = 929px, Vietnamese. English: 895px (handled by JS) */
+    top: 920px;
+    /* Adjusted spacing for larger fonts */
     width: auto;
     /* Vietnamese and English have different widths (handled by JS) */
     font-family: 'Handjet', sans-serif;
-    font-size: 38px;
-    /* Scaled: 64 * 0.6 = 38px */
+    font-size: 64px;
+    /* From Figma */
     font-style: normal;
     font-weight: 500;
     /* medium */
@@ -605,35 +609,33 @@ ul {
 
   /* Desktop: Mirror 2 - From Figma - Scaled for 1920x1080 */
   .philosophy__mirror--second {
-    position: absolute !important;
-    right: 108px !important;
-    /* 1920 - 1812 = 108px from right */
-    left: auto !important;
-    /* Override any left value */
-    top: 964px;
-    /* Scaled: 1606 * 0.6 = 964px, Vietnamese. English: 1002px (handled by JS) */
-    height: 39px;
-    /* Scaled: 65 * 0.6 = 39px */
+    position: absolute;
+    left: 1000px;
+    /* Default Vietnamese position */
+    top: 980px;
+    height: 50px;
     width: 784px;
-    /* Scaled: 1307 * 0.6 = 784px, Vietnamese. English: 544px (handled by JS) */
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    /* Aligns content to the right inside the container */
     transform: scaleY(-1);
     z-index: 3;
+    opacity: 0.5;
+    filter: blur(2px);
   }
 
   .philosophy__mirror--second p {
     font-family: 'Inter', sans-serif;
-    font-size: 29px;
-    /* Scaled: 48 * 0.6 = 29px, Vietnamese. English: 24px (handled by JS) */
+    font-size: 43px;
+    /* From Figma - English version */
     font-style: italic;
     font-weight: 200;
     /* extralight */
     color: #FF71E7;
     text-align: right;
     line-height: normal;
-    margin: 0;
+    margin-top: -20px;
     white-space: nowrap;
     width: 100%;
   }
@@ -695,11 +697,11 @@ ul {
     position: absolute;
     right: 108px;
     /* 1920 - 1812 = 108px from right */
-    top: 1020px;
-    /* Scaled: 1699 * 0.6 = 1020px, Vietnamese. English: 1058px (handled by JS) */
+    top: 1100px;
+    /* Adjusted for new layout with larger fonts */
     font-family: 'Handjet', sans-serif;
-    font-size: 14px;
-    /* Scaled: 24 * 0.6 = 14px */
+    font-size: 24px;
+    /* From Figma */
     font-style: normal;
     font-weight: 500;
     /* medium */
@@ -714,9 +716,9 @@ ul {
   /* Desktop: CTA Button - From Figma - Scaled for 1920x1080 */
   .philosophy__cta {
     position: absolute;
-    left: 377px;
-    top: 1043px;
-    /* Scaled: 1739 * 0.6 = 1043px */
+    left: 287px;
+    top: 1000px;
+    /* Adjusted under mirror 1 */
     width: 187px;
     /* Scaled: 311 * 0.6 = 187px */
     height: 47px;
@@ -754,8 +756,8 @@ ul {
   }
 }
 
-/* Default styles for smaller screens (fallback) - Only apply below 1025px */
-@media (max-width: 1024px) {
+/* Mobile styles for philosophy section - Only apply to mobile (576px and below) */
+@media (max-width: 576px) {
   .philosophy__dragon {
     width: 100%;
     max-width: 1672px;

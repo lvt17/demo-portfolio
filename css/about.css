@@ -48,14 +48,14 @@
 }
 
 .about-hero__bamboo--left {
-  left: -100px;
-  top: -100px;
+  left: 50px;
+  bottom: 28px;
   transform: rotate(-15deg);
 }
 
 .about-hero__bamboo--right {
-  right: -100px;
-  top: -100px;
+  right: 50px;
+  bottom: 28px;
   transform: rotate(15deg) scaleX(-1);
 }
 
@@ -92,20 +92,30 @@
 
 /* Subtle color change animation for title - no glow */
 @keyframes titleColorFlicker {
-  0%, 100% {
+
+  0%,
+  100% {
     color: #ffffff;
   }
+
   20% {
-    color: #ffccff; /* Light pink */
+    color: #ffccff;
+    /* Light pink */
   }
+
   40% {
-    color: #ccffff; /* Light cyan */
+    color: #ccffff;
+    /* Light cyan */
   }
+
   60% {
-    color: #ffffcc; /* Light yellow */
+    color: #ffffcc;
+    /* Light yellow */
   }
+
   80% {
-    color: #ccffcc; /* Light green */
+    color: #ccffcc;
+    /* Light green */
   }
 }
 
@@ -147,15 +157,23 @@
 }
 
 @keyframes scrollText {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Animation for peony flower */
 @keyframes peonyFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(29deg) translateY(0);
   }
+
   50% {
     transform: rotate(29deg) translateY(-10px);
   }
@@ -166,6 +184,7 @@
     transform: rotate(29deg) scale(0.8);
     opacity: 0;
   }
+
   100% {
     transform: rotate(29deg) scale(1);
     opacity: 1;
@@ -279,9 +298,9 @@
   right: -20px !important;
   width: 245.4px;
 
-height: 374.4px;
-transform: rotate(29deg);
-aspect-ratio: 409/624;
+  height: 374.4px;
+  transform: rotate(29deg);
+  aspect-ratio: 409/624;
   z-index: 7;
 }
 
@@ -290,49 +309,49 @@ aspect-ratio: 409/624;
 }
 
 .about-me__label {
-    color: #BAA5FF;
-    font-family: Handjet;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-bottom: 20px;
+  color: #BAA5FF;
+  font-family: Handjet;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 20px;
 }
 
 .about-me__name {
-    padding-bottom: 20px;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  padding-bottom: 20px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .about-me__bio {
-    width: 722px;
-    height: 139px;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: italic;
-    font-weight: 200;
-    line-height: 1.4;
-    padding-bottom: 20px;
+  width: 722px;
+  height: 139px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 1.4;
+  padding-bottom: 20px;
 }
 
 .about-me__bio .iloveby {
-    color: #FFF;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 1.4;
-    padding-bottom: 20px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4;
+  padding-bottom: 20px;
 }
 
 .about-me__tools {
-    padding-top: 20px;
+  padding-top: 20px;
   display: flex;
   gap: 20px;
   margin-bottom: 50px;
@@ -365,23 +384,23 @@ aspect-ratio: 409/624;
 }
 
 .about-me__covenant-title {
-    color: #BAA5FF;
-    font-family: Handjet;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-bottom: 20px;
+  color: #BAA5FF;
+  font-family: Handjet;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 20px;
 }
 
 .about-me__covenant-text {
-    color: #FFF;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 1.4;
-    padding-bottom: 20px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4;
+  padding-bottom: 20px;
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -406,6 +425,8 @@ aspect-ratio: 409/624;
 
 .about-contact__container {
   display: flex;
+  justify-content: center;
+  /* Center the card */
   gap: 60px;
   padding: 0 289px;
   position: relative;
@@ -418,46 +439,47 @@ aspect-ratio: 409/624;
   background: linear-gradient(180deg, rgba(255, 200, 180, 0.95) 0%, rgba(255, 180, 170, 0.95) 100%);
   border-radius: 20px;
   padding: 50px 74px;
+  align-items: center;
   position: relative;
   z-index: 2;
 }
 
 .about-contact__title {
-    color: #000;
-    font-family: Handjet;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-bottom: 15px;
+  color: #000;
+  font-family: Handjet;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 15px;
 }
 
 .about-contact__subtitle {
-    width: 722px;
-    color: #000;
-    font-family: Inter;
-    font-size: 28px;
-    font-style: italic;
-    font-weight: 50;
-    line-height: normal;
-    padding-bottom: 15px;
+  width: 722px;
+  color: #000;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 50;
+  line-height: normal;
+  padding-bottom: 15px;
 }
 
 .about-contact__info {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
+
 }
 
 .about-contact__item {
-    color: #000;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    
+  color: #000;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+
 }
 
 
@@ -479,9 +501,9 @@ aspect-ratio: 409/624;
 }
 
 .about-contact__dragon {
-  position: absolute;
-  right: -60px;
-  bottom: -20px;
+  position: relative;
+  right: -900px;
+  top: -150px;
   width: 50%;
   max-width: 1554px;
   z-index: 5;
@@ -493,15 +515,15 @@ aspect-ratio: 409/624;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .about-me__image-wrapper {
     flex: none;
   }
-  
+
   .about-contact__container {
     padding: 0 74px;
   }
-  
+
   .about-contact__card {
     flex: 1;
   }
@@ -512,11 +534,11 @@ aspect-ratio: 409/624;
   .about-hero {
     padding-top: 120px;
   }
-  
+
   .about-me {
     padding: 80px 40px;
   }
-  
+
   .about-contact {
     padding: 60px 40px;
   }
@@ -531,30 +553,31 @@ aspect-ratio: 409/624;
   }
 
   .about-hero__temple {
-    width: 350px !important;
-    max-width: 130% !important;
+    width: 100% !important;
+    /* Increased from 350px */
+    max-width: 100% !important;
     margin: 0 auto !important;
     position: relative !important;
     display: flex !important;
     justify-content: center !important;
   }
-  
+
   .about-hero__scrolling-text {
     font-size: 18px !important;
   }
-  
+
   /* Hide bamboo on mobile */
   .about-hero__bamboo {
     display: none !important;
   }
-  
+
   .about-me {
     padding: 40px 20px !important;
     overflow-x: hidden !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
-  
+
   .about-me__container {
     flex-direction: column !important;
     align-items: center !important;
@@ -563,7 +586,7 @@ aspect-ratio: 409/624;
     box-sizing: border-box !important;
     gap: 30px !important;
   }
-  
+
   .about-me__image-wrapper {
     flex: none !important;
     width: 200px !important;
@@ -573,7 +596,7 @@ aspect-ratio: 409/624;
     display: flex !important;
     justify-content: center !important;
   }
-  
+
   .about-me__photo {
     width: 100% !important;
     height: auto !important;
@@ -582,20 +605,25 @@ aspect-ratio: 409/624;
     top: auto !important;
     position: relative !important;
   }
-  
+
   .about-me__photo img {
     width: 100% !important;
     height: 100% !important;
   }
-  
+
   .about-me__frame {
     display: none !important;
   }
-  
+
   .about-me__flower {
-    display: none !important;
+    display: block !important;
+    /* Show flower on mobile */
+    width: 120px !important;
+    height: auto !important;
+    top: -20px !important;
+    right: -30px !important;
   }
-  
+
   .about-me__content {
     width: 100% !important;
     max-width: 100% !important;
@@ -605,17 +633,17 @@ aspect-ratio: 409/624;
     opacity: 1 !important;
     transform: none !important;
   }
-  
+
   .about-me__label {
     font-size: 20px !important;
     text-align: center !important;
   }
-  
+
   .about-me__name {
     font-size: 20px !important;
     text-align: center !important;
   }
-  
+
   .about-me__bio {
     font-size: 14px !important;
     text-align: center !important;
@@ -626,7 +654,7 @@ aspect-ratio: 409/624;
     position: relative !important;
     font-style: normal !important;
   }
-  
+
   .about-me__bio .iloveby {
     font-size: 14px !important;
     text-align: center !important;
@@ -645,12 +673,12 @@ aspect-ratio: 409/624;
     margin-top: 20px !important;
     margin-bottom: 30px !important;
   }
-  
+
   .about-me__tool {
     width: 45px !important;
     height: 45px !important;
   }
-  
+
   .about-me__covenant {
     text-align: center !important;
     width: 100% !important;
@@ -658,43 +686,43 @@ aspect-ratio: 409/624;
     margin-top: 20px !important;
     position: relative !important;
   }
-  
+
   .about-me__covenant-title {
     font-size: 22px !important;
     text-align: center !important;
     margin-bottom: 15px !important;
   }
-  
+
   .about-me__covenant-text {
     font-size: 14px !important;
     text-align: center !important;
     line-height: 1.6 !important;
   }
-  
+
   .about-contact__container {
     padding: 0 20px !important;
     flex-direction: column !important;
   }
-  
+
   .about-contact__card {
     padding: 30px !important;
   }
-  
+
   .about-contact__title {
     font-size: 24px !important;
   }
-  
+
   .about-contact__item {
     font-size: 14px !important;
     flex-direction: column !important;
     gap: 5px !important;
     word-break: break-word !important;
   }
-  
+
   .about-contact__item a {
     word-break: break-all !important;
   }
-  
+
   .about-contact__dragon {
     position: relative !important;
     width: 100% !important;

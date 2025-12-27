@@ -61,6 +61,8 @@
   margin-bottom: 60px;
   text-align: left;
   width: 100%;
+  padding-top: 80px;
+  /* Added spacing from back button/navbar */
 }
 
 .project__category {
@@ -73,7 +75,8 @@
   text-align: left;
   position: relative;
   left: 100px;
-  margin-top: 60px;
+  margin-top: 20px;
+  /* Reduced from 60px, spacing now handled by parent padding */
 }
 
 .project__subtitle {
@@ -111,7 +114,7 @@
 
 .project__decor--bamboo {
   right: 400px;
-  top: 400px;
+  top: 500px;
   width: 400px;
   min-width: 400px;
   max-width: 400px;
@@ -123,7 +126,7 @@
 
 .project__hero:hover .project__decor--bamboo {
   opacity: 0.9;
-  transform: scaleX(-1) rotate(2deg) translateX(390px);
+  transform: scaleX(-1) rotate(2deg) translateX(450px);
 }
 
 .project__decor--bamboo img {
@@ -138,7 +141,7 @@
   width: 350px;
   min-width: 350px;
   max-width: 350px;
-  transform: scaleX(-1) rotate(2deg) translateX(150px);
+  transform: scaleX(-1) rotate(2deg) translateX(300px);
   z-index: 2;
   opacity: 0.3;
   transition: all 0.6s ease-out;
@@ -295,8 +298,15 @@
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
 }
 
 /* ===== 2D&3D DESIGN PAGE ===== */
@@ -372,54 +382,55 @@
   .project {
     padding: 120px 60px 80px;
   }
-  
+
   .project__back {
     width: 50px;
     height: 50px;
     left: 30px;
     top: 120px;
   }
-  
+
   .project__category {
     font-size: 80px;
   }
-  
+
   .project__subtitle {
     font-size: 40px;
   }
-  
+
   .project__description p {
     font-size: 32px;
   }
-  
+
   .project__tools-label {
     font-size: 32px;
   }
-  
+
   .project__storyboard {
     flex-direction: column;
     gap: 50px;
   }
-  
+
   .project__cta {
     gap: 100px;
   }
-  
+
   .project__gallery-overlap {
     min-height: 600px;
   }
-  
+
   .project__tool--large {
     width: 150px;
     height: 150px;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile only - tablet should use desktop layout */
+@media (max-width: 576px) {
   .project {
     padding: 80px 20px 60px;
   }
-  
+
   .project__back {
     width: 36px;
     height: 36px;
@@ -428,95 +439,95 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  
+
   .project__header {
     margin-bottom: 30px;
   }
-  
+
   .project__category {
     font-size: 32px;
     left: 0 !important;
   }
-  
+
   .project__subtitle {
     font-size: 20px;
     left: 0 !important;
   }
-  
+
   .project__subtitle--interactive {
     font-size: 18px;
   }
-  
+
   .project__poster {
     max-width: 100%;
   }
-  
+
   .project__description {
     padding: 0;
     margin-bottom: 40px;
   }
-  
+
   .project__description p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
   }
-  
+
   .project__tools {
     padding: 0;
     margin-bottom: 40px;
   }
-  
+
   .project__tools-label {
     font-size: 18px;
   }
-  
+
   .project__tools-list {
     gap: 20px;
   }
-  
+
   .project__tool {
     width: 60px;
     height: 60px;
   }
-  
+
   .project__storyboard {
     padding: 0;
     margin-bottom: 40px;
     gap: 30px;
   }
-  
+
   .project__storyboard-item {
     max-width: 100%;
   }
-  
+
   .project__decor--bamboo,
   .project__decor--flower {
     opacity: 1 !important;
     display: block;
   }
-  
+
   .project__cta {
     flex-direction: column;
     gap: 40px;
     padding: 40px 0;
   }
-  
+
   .project__cta-flower {
     width: 100px;
     height: 100px;
   }
-  
+
   .project__cta-btn {
     font-size: 18px;
     padding: 12px 24px;
   }
-  
+
   .project__gallery-overlap {
     position: relative;
     min-height: auto;
   }
-  
+
   .project__gallery-img {
     position: relative;
     width: 100% !important;
@@ -526,21 +537,19 @@
     top: auto !important;
     margin-bottom: 20px;
   }
-  
+
   .project__hero--2d3d .project__header {
     padding-left: 0;
   }
-  
+
   .project__hero--2d3d .project__category,
   .project__hero--2d3d .project__subtitle {
     text-align: center !important;
     left: 0 !important;
   }
-  
+
   .project__tool--large {
     width: 80px;
     height: 80px;
   }
 }
-
-

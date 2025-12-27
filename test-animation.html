@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Animation Test</title>
+  <style>
+    body { margin: 0; padding: 0; background: #000; }
+    #test-canvas { 
+      position: fixed; 
+      top: 0; left: 0; 
+      width: 100vw; 
+      height: 100vh; 
+    }
+    #status {
+      position: fixed;
+      top: 10px; left: 10px;
+      color: #fff;
+      font-family: monospace;
+      font-size: 14px;
+      z-index: 1000;
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <div id="status">Loading...</div>
+  <div id="test-canvas"></div>
+
+  <script>
+    const status = document.getElementById('status');
+    
+    // Check if p5 loaded
+    if (typeof p5 !== 'undefined') {
+      status.innerHTML = '✅ p5.js loaded<br>';
+    } else {
+      status.innerHTML = '❌ p5.js NOT loaded<br>';
+    }
+    
+    // Simple p5 sketch - same as old/sketch.js
+    const sketch = (p) => {
+      let strips = [];
+      let stripCount;
+      const speedFactor = 5;
+      
+      const theme = {
+        baseHue: 280,
+        hueRange: 60,
+        saturation: 50,
+        brightness: 90
+      };
+      
+      class Strip {
+        constructor(x, w) {
+          this.x = x;
+          this.w = w;
+          this.phase = p.random(1000);
+          this.speed = p.random(0.001, 0.003);
+        }
+        update() {
+          this.phase += this.speed * speedFactor;
+        }
+        display() {
+          for (let y = 0; y < p.height; y += 2) {
+            let n = p.noise(this.x * 0.01, y * 0.005, this.phase);
+            let hue = theme.baseHue + p.sin(n * p.TWO_PI) * theme.hueRange;
+            let sat = theme.saturation + n * 20;
+            let bri = theme.brightness + p.sin(this.phase + y * 0.01) * 6;
+            p.fill(hue, sat, bri, 90);
+            p.rect(this.x, y, this.w, 3);
+          }
+        }
+      }
+      
+      p.setup = () => {
+        status.innerHTML += '✅ p5 setup() called<br>';
+        const c = p.createCanvas(p.windowWidth, p.windowHeight);
+        c.parent('test-canvas');
+        status.innerHTML += `✅ Canvas created: ${p.width}x${p.height}<br>`;
+        
+        p.colorMode(p.HSB, 360, 100, 100, 100);
+        p.noStroke();
+        
+        // Generate strips
+        stripCount = p.int(p.width / 18);
+        let x = 0;
+        for (let i = 0; i < stripCount; i++) {
+          let w = p.random(6, 28);
+          strips.push(new Strip(x, w));
+          x += w;
+        }
+        status.innerHTML += `✅ ${strips.length} strips created<br>`;
+        status.innerHTML += '🎨 Animation should be running now!';
+      };
+      
+      p.draw = () => {
+        p.background(210, 30, 95);
+        strips.forEach(s => {
+          s.update();
+          s.display();
+        });
+      };
+      
+      p.windowResized = () => {
+        p.resizeCanvas(p.windowWidth, p.windowHeight);
+      };
+    };
+    
+    // Initialize
+    new p5(sketch);
+  </script>
+</body>
+</html>
