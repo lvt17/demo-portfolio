@@ -1507,16 +1507,20 @@ body {
     position: absolute;
     left: 198px; /* Scaled from 232.5px (center in 440px frame) */
     top: 581px; /* Scaled from 682px */
-    width: 291px; /* Scaled from 341px */
+    width: auto !important; /* Auto width to fit content */
+    max-width: 291px; /* Max width from original */
     transform: none; /* Remove translateX since we use exact left value */
     color: #FFF;
     text-align: center;
     font-family: 'Handjet', monospace;
-    font-size: 14px; /* Scaled: 16 * 0.852 = 14px */
+    font-size: 10px !important; /* Further reduced to fit one line */
     font-weight: 500;
     line-height: normal;
     margin: 0;
     padding: 0;
+    white-space: nowrap !important; /* Ensure single line */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   /* Flower - Figma: left: 42px, top: 771px, w: 106px, h: 108px, rotate 180deg */
