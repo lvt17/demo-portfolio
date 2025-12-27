@@ -299,7 +299,7 @@
   /* Lotus Left - Increased 20%: width 249px -> 299px */
   .home-1__lotus--left {
     left: -16px !important;
-    bottom: -100px !important;
+    bottom: -50px !important;
     top: auto !important;
     width: 299px !important; /* 249px * 1.2 = 299px */
     height: auto;
@@ -309,7 +309,7 @@
   /* Lotus Right - Increased 20%: width 150px -> 180px */
   .home-1__lotus--right {
     left: 241px !important;
-    bottom: -100px !important;
+    bottom: -50px !important;
     top: auto !important;
     width: 180px !important; /* 150px * 1.2 = 180px */
     height: auto;
@@ -415,7 +415,7 @@
   /* Lotus Left - Increased 20%: width 249px -> 299px */
   .home-2__lotus--left {
     left: -16px !important;
-    bottom: -100px !important;
+    bottom: -50px !important;
     top: auto !important;
     width: 299px !important; /* 249px * 1.2 = 299px */
     height: auto;
@@ -425,7 +425,7 @@
   /* Lotus Right - Increased 20%: width 150px -> 180px */
   .home-2__lotus--right {
     left: 241px !important;
-    bottom: -100px !important;
+    bottom: -50px !important;
     top: auto !important;
     width: 180px !important; /* 150px * 1.2 = 180px */
     height: auto;
