@@ -14,13 +14,13 @@
   --color-cyan: #00CED1;
   --color-magenta: #FF00FF;
   --color-lime: #ADFF2F;
-  
+
   --font-pixel: 'VT323', monospace;
   --font-handwritten: 'Caveat', cursive;
   --font-serif: 'Cormorant Garamond', serif;
-  
+
   --transition-smooth: all 0.3s ease;
-  
+
   /* Max width for layout consistency */
   --max-width: 1920px;
   --content-max-width: 1600px;
@@ -45,7 +45,9 @@
 }
 
 /* ===== RESET ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,20 +57,22 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Block zoom/resize on desktop - Fixed 1920x1080 viewport */
+/* Desktop layout - max 1920px width, allow scroll */
 @media (min-width: 1025px) {
   html {
-    width: 1920px;
-    height: 1080px;
+    max-width: 1920px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Allow vertical scroll */
   }
-  
+
   body {
-    width: 1920px;
-    height: 1080px;
+    max-width: 1920px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Allow vertical scroll */
     position: relative;
   }
 }
@@ -287,8 +291,8 @@ ul {
 }
 
 .hero__welcome .to {
-    position: relative;
-    right: -110px;
+  position: relative;
+  right: -110px;
   display: inline;
   margin-right: 15px;
 }
@@ -306,62 +310,63 @@ ul {
 }
 
 .hero__welcome .land {
-    color: #FFF;
-    position: relative;
-    top: -25px;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Handjet;
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+  color: #FFF;
+  position: relative;
+  top: -25px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Handjet;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .hero__portfolio {
   text-align: right;
   position: relative;
-  top: -300px; /* Nhích lên trên - tăng số âm để lên cao hơn */
+  top: -300px;
+  /* Nhích lên trên - tăng số âm để lên cao hơn */
 }
 
 .hero__name {
-    color: #FFF;
-    text-align: right;
-    font-family: Handjet;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: #FFF;
+  text-align: right;
+  font-family: Handjet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .hero__name .chann {
-    color: #FFF;
-font-family: Handjet;
-font-size: 64px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+  color: #FFF;
+  font-family: Handjet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .hero__title {
-    color: #FFF;
+  color: #FFF;
 
-    text-align: right;
-    font-family: Handjet;
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    
-    
+  text-align: right;
+  font-family: Handjet;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+
 }
 
 .hero__title .fo {
-    color: #FFF;
-    font-family: "Bilbo Swash Caps";
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: #FFF;
+  font-family: "Bilbo Swash Caps";
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .hero__lotus {
@@ -380,20 +385,30 @@ line-height: normal;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* ===== PHILOSOPHY SECTION (HOME 2) ===== */
 .philosophy {
-  min-height: 1080px; /* Fixed height for 1920x1080 viewport */
-  height: 1080px; /* Fixed height for desktop */
+  min-height: 1080px;
+  /* Fixed height for 1920x1080 viewport */
+  height: 1080px;
+  /* Fixed height for desktop */
   padding: 0;
   display: block;
   position: relative;
   background: var(--color-black);
   width: 100%;
-  overflow: hidden; /* Hide overflow for fixed viewport */
+  overflow: hidden;
+  /* Hide overflow for fixed viewport */
 }
 
 .philosophy__inner {
@@ -467,9 +482,12 @@ line-height: normal;
     position: absolute !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    top: 186px !important; /* Scaled: 310 * 0.6 = 186px */
-    width: 1003px !important; /* Scaled: 1672 * 0.6 = 1003px */
-    height: 442px !important; /* Scaled: 736 * 0.6 = 442px */
+    top: 186px !important;
+    /* Scaled: 310 * 0.6 = 186px */
+    width: 1003px !important;
+    /* Scaled: 1672 * 0.6 = 1003px */
+    height: 442px !important;
+    /* Scaled: 736 * 0.6 = 442px */
     z-index: 2;
     margin: 0 !important;
   }
@@ -478,7 +496,8 @@ line-height: normal;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: none; /* Default - will be overridden in mobile */
+    transform: none;
+    /* Default - will be overridden in mobile */
   }
 
   .philosophy__content {
@@ -490,12 +509,16 @@ line-height: normal;
   /* Desktop: Title - From Figma - Scaled for 1920x1080 */
   .philosophy__title {
     position: absolute;
-    left: 106px; /* Vietnamese: 106px, English: 140px (handled by JS) */
-    top: 710px; /* Scaled: 1184 * 0.6 = 710px */
+    left: 106px;
+    /* Vietnamese: 106px, English: 140px (handled by JS) */
+    top: 710px;
+    /* Scaled: 1184 * 0.6 = 710px */
     font-family: 'Handjet', sans-serif;
-    font-size: 77px; /* Scaled: 128 * 0.6 = 77px */
+    font-size: 77px;
+    /* Scaled: 128 * 0.6 = 77px */
     font-style: normal;
-    font-weight: 600; /* semibold */
+    font-weight: 600;
+    /* semibold */
     line-height: normal;
     color: #FFF;
     white-space: nowrap;
@@ -506,12 +529,16 @@ line-height: normal;
   /* Desktop: Quote 1 - From Figma - Scaled for 1920x1080 */
   .philosophy__quote--first {
     position: absolute;
-    left: 106px; /* Vietnamese: 106px, English: 140px (handled by JS) */
-    top: 811px; /* Scaled: 1351 * 0.6 = 811px */
+    left: 106px;
+    /* Vietnamese: 106px, English: 140px (handled by JS) */
+    top: 811px;
+    /* Scaled: 1351 * 0.6 = 811px */
     font-family: 'Handjet', sans-serif;
-    font-size: 38px; /* Scaled: 64 * 0.6 = 38px */
+    font-size: 38px;
+    /* Scaled: 64 * 0.6 = 38px */
     font-style: normal;
-    font-weight: 500; /* medium */
+    font-weight: 500;
+    /* medium */
     line-height: normal;
     color: #FFF;
     white-space: nowrap;
@@ -522,10 +549,14 @@ line-height: normal;
   /* Desktop: Mirror 1 - From Figma - Scaled for 1920x1080 */
   .philosophy__mirror--first {
     position: absolute;
-    left: 135px; /* Vietnamese: 135px, English: 169px (handled by JS) */
-    top: 845px; /* Scaled: 1409 * 0.6 = 845px */
-    height: 35px; /* Scaled: 58 * 0.6 = 35px */
-    width: 598px; /* Scaled: 996 * 0.6 = 598px */
+    left: 135px;
+    /* Vietnamese: 135px, English: 169px (handled by JS) */
+    top: 845px;
+    /* Scaled: 1409 * 0.6 = 845px */
+    height: 35px;
+    /* Scaled: 58 * 0.6 = 35px */
+    width: 598px;
+    /* Scaled: 996 * 0.6 = 598px */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -535,9 +566,11 @@ line-height: normal;
 
   .philosophy__mirror--first p {
     font-family: 'Inter', sans-serif;
-    font-size: 29px; /* Scaled: 48 * 0.6 = 29px, Vietnamese. English: 24px (handled by JS) */
+    font-size: 29px;
+    /* Scaled: 48 * 0.6 = 29px, Vietnamese. English: 24px (handled by JS) */
     font-style: italic;
-    font-weight: 200; /* extralight */
+    font-weight: 200;
+    /* extralight */
     color: #41D9FF;
     line-height: normal;
     margin: 0;
@@ -548,14 +581,20 @@ line-height: normal;
   /* Desktop: Quote 2 - From Figma - Scaled for 1920x1080 */
   .philosophy__quote--second {
     position: absolute !important;
-    right: 108px !important; /* 1920 - 1812 = 108px from right */
-    left: auto !important; /* Override any left value */
-    top: 929px; /* Scaled: 1549 * 0.6 = 929px, Vietnamese. English: 895px (handled by JS) */
-    width: auto; /* Vietnamese and English have different widths (handled by JS) */
+    right: 108px !important;
+    /* 1920 - 1812 = 108px from right */
+    left: auto !important;
+    /* Override any left value */
+    top: 929px;
+    /* Scaled: 1549 * 0.6 = 929px, Vietnamese. English: 895px (handled by JS) */
+    width: auto;
+    /* Vietnamese and English have different widths (handled by JS) */
     font-family: 'Handjet', sans-serif;
-    font-size: 38px; /* Scaled: 64 * 0.6 = 38px */
+    font-size: 38px;
+    /* Scaled: 64 * 0.6 = 38px */
     font-style: normal;
-    font-weight: 500; /* medium */
+    font-weight: 500;
+    /* medium */
     line-height: normal;
     color: #FFF;
     text-align: right;
@@ -567,11 +606,16 @@ line-height: normal;
   /* Desktop: Mirror 2 - From Figma - Scaled for 1920x1080 */
   .philosophy__mirror--second {
     position: absolute !important;
-    right: 108px !important; /* 1920 - 1812 = 108px from right */
-    left: auto !important; /* Override any left value */
-    top: 964px; /* Scaled: 1606 * 0.6 = 964px, Vietnamese. English: 1002px (handled by JS) */
-    height: 39px; /* Scaled: 65 * 0.6 = 39px */
-    width: 784px; /* Scaled: 1307 * 0.6 = 784px, Vietnamese. English: 544px (handled by JS) */
+    right: 108px !important;
+    /* 1920 - 1812 = 108px from right */
+    left: auto !important;
+    /* Override any left value */
+    top: 964px;
+    /* Scaled: 1606 * 0.6 = 964px, Vietnamese. English: 1002px (handled by JS) */
+    height: 39px;
+    /* Scaled: 65 * 0.6 = 39px */
+    width: 784px;
+    /* Scaled: 1307 * 0.6 = 784px, Vietnamese. English: 544px (handled by JS) */
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -581,9 +625,11 @@ line-height: normal;
 
   .philosophy__mirror--second p {
     font-family: 'Inter', sans-serif;
-    font-size: 29px; /* Scaled: 48 * 0.6 = 29px, Vietnamese. English: 24px (handled by JS) */
+    font-size: 29px;
+    /* Scaled: 48 * 0.6 = 29px, Vietnamese. English: 24px (handled by JS) */
     font-style: italic;
-    font-weight: 200; /* extralight */
+    font-weight: 200;
+    /* extralight */
     color: #FF71E7;
     text-align: right;
     line-height: normal;
@@ -596,9 +642,12 @@ line-height: normal;
   .philosophy__flower {
     position: absolute;
     left: 1417px;
-    top: 676px; /* Scaled: 1126 * 0.6 = 676px */
-    width: 168px; /* Scaled: 279.527 * 0.6 = 168px */
-    height: 171px; /* Scaled: 285.775 * 0.6 = 171px */
+    top: 676px;
+    /* Scaled: 1126 * 0.6 = 676px */
+    width: 168px;
+    /* Scaled: 279.527 * 0.6 = 168px */
+    height: 171px;
+    /* Scaled: 285.775 * 0.6 = 171px */
     z-index: 3;
     display: flex;
     align-items: center;
@@ -607,7 +656,7 @@ line-height: normal;
     cursor: pointer;
     transition: transform 0.5s ease;
   }
-  
+
   .philosophy__flower:hover {
     transform: rotate(180deg) scale(1.1);
   }
@@ -622,9 +671,12 @@ line-height: normal;
   .philosophy__flower--bottom-left {
     position: absolute;
     left: 124px;
-    top: 938px; /* Scaled: 1563 * 0.6 = 938px */
-    width: 136px; /* Scaled: 227 * 0.6 = 136px */
-    height: 139px; /* Scaled: 232 * 0.6 = 139px */
+    top: 938px;
+    /* Scaled: 1563 * 0.6 = 938px */
+    width: 136px;
+    /* Scaled: 227 * 0.6 = 136px */
+    height: 139px;
+    /* Scaled: 232 * 0.6 = 139px */
     z-index: 3;
     display: flex;
     align-items: center;
@@ -641,12 +693,16 @@ line-height: normal;
   /* Desktop: Attribution - From Figma - Scaled for 1920x1080 */
   .philosophy__attribution {
     position: absolute;
-    right: 108px; /* 1920 - 1812 = 108px from right */
-    top: 1020px; /* Scaled: 1699 * 0.6 = 1020px, Vietnamese. English: 1058px (handled by JS) */
+    right: 108px;
+    /* 1920 - 1812 = 108px from right */
+    top: 1020px;
+    /* Scaled: 1699 * 0.6 = 1020px, Vietnamese. English: 1058px (handled by JS) */
     font-family: 'Handjet', sans-serif;
-    font-size: 14px; /* Scaled: 24 * 0.6 = 14px */
+    font-size: 14px;
+    /* Scaled: 24 * 0.6 = 14px */
     font-style: normal;
-    font-weight: 500; /* medium */
+    font-weight: 500;
+    /* medium */
     line-height: normal;
     color: #FFF;
     text-align: right;
@@ -659,9 +715,12 @@ line-height: normal;
   .philosophy__cta {
     position: absolute;
     left: 377px;
-    top: 1043px; /* Scaled: 1739 * 0.6 = 1043px */
-    width: 187px; /* Scaled: 311 * 0.6 = 187px */
-    height: 47px; /* Scaled: 78 * 0.6 = 47px */
+    top: 1043px;
+    /* Scaled: 1739 * 0.6 = 1043px */
+    width: 187px;
+    /* Scaled: 311 * 0.6 = 187px */
+    height: 47px;
+    /* Scaled: 78 * 0.6 = 47px */
     z-index: 3;
     margin: 0;
   }
@@ -673,10 +732,13 @@ line-height: normal;
     width: 100%;
     height: 100%;
     background: #FFE7AB;
-    border-radius: 12px; /* Scaled: 20 * 0.6 = 12px */
+    border-radius: 12px;
+    /* Scaled: 20 * 0.6 = 12px */
     font-family: 'Handjet', sans-serif;
-    font-size: 22px; /* Scaled: 36 * 0.6 = 22px */
-    font-weight: 600; /* semibold */
+    font-size: 22px;
+    /* Scaled: 36 * 0.6 = 22px */
+    font-weight: 600;
+    /* semibold */
     color: #000;
     text-decoration: none;
     white-space: nowrap;
@@ -1069,24 +1131,41 @@ line-height: normal;
 }
 
 /* Stagger animations */
-.animate-element:nth-child(1) { transition-delay: 0.1s; }
-.animate-element:nth-child(2) { transition-delay: 0.2s; }
-.animate-element:nth-child(3) { transition-delay: 0.3s; }
-.animate-element:nth-child(4) { transition-delay: 0.4s; }
+.animate-element:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.animate-element:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.animate-element:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.animate-element:nth-child(4) {
+  transition-delay: 0.4s;
+}
 
 /* Fade in animation */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Slide up animation */
 @keyframes slideUp {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(50px);
   }
-  to { 
+
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -1094,11 +1173,12 @@ line-height: normal;
 
 /* Scale in animation */
 @keyframes scaleIn {
-  from { 
+  from {
     opacity: 0;
     transform: scale(0.9);
   }
-  to { 
+
+  to {
     opacity: 1;
     transform: scale(1);
   }
@@ -1106,9 +1186,12 @@ line-height: normal;
 
 /* Glow animation for flowers */
 @keyframes glow {
-  0%, 100% {
+
+  0%,
+  100% {
     filter: drop-shadow(0 0 20px rgba(255, 200, 100, 0.5));
   }
+
   50% {
     filter: drop-shadow(0 0 40px rgba(255, 200, 100, 0.8));
   }
@@ -1141,6 +1224,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1152,46 +1236,46 @@ body {
   .hero__welcome {
     font-size: 72px;
   }
-  
+
   .hero__welcome .my {
     font-size: 90px;
   }
-  
+
   .hero__title {
     font-size: 80px;
   }
-  
+
   .philosophy__title {
     font-size: 72px;
   }
-  
+
   .philosophy__quote p {
     font-size: 36px;
   }
-  
+
   .philosophy__content {
     padding-right: 200px;
   }
-  
+
   .philosophy__lang-toggle {
     width: 180px;
     height: 180px;
     right: 50px;
   }
-  
+
   .philosophy__bottom {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .philosophy__bottom-right {
     max-width: 100%;
   }
-  
+
   .philosophy__quote--second {
     text-align: left;
   }
-  
+
   .philosophy__attribution {
     text-align: left;
   }
@@ -1202,7 +1286,7 @@ body {
   .header {
     padding: 15px 40px;
   }
-  
+
   .hero__content {
     padding: 0 40px;
     padding-top: 150px;
@@ -1210,22 +1294,22 @@ body {
     align-items: center;
     text-align: center;
   }
-  
+
   .hero__welcome {
     font-size: 48px;
     position: relative;
     left: 0;
     text-align: center;
   }
-  
+
   .hero__welcome .land {
     font-size: 42px;
   }
-  
+
   .hero__title {
     font-size: 64px;
   }
-  
+
   .hero__portfolio {
     position: relative;
     top: 0;
@@ -1233,89 +1317,89 @@ body {
     text-align: center;
     margin-bottom: 30px;
   }
-  
+
   .hero__name {
     font-size: 28px;
   }
-  
+
   .hero__title .fo {
     font-size: 80px;
   }
-  
+
   .hero__lotus {
     width: 200px;
     right: 15%;
     bottom: 10%;
     z-index: 1;
   }
-  
+
   .hero__lotus--small {
     width: 140px;
     right: 55%;
     bottom: 15%;
   }
-  
+
   .philosophy {
     padding: 80px 40px;
     min-height: auto;
   }
-  
+
   .philosophy__dragon {
     max-width: 100%;
     top: 40px;
     margin-bottom: 20px;
   }
-  
+
   .philosophy__title {
     font-size: 48px;
   }
-  
+
   .philosophy__quote p {
     font-size: 28px;
   }
-  
+
   .philosophy__quote .mirror {
     font-size: 20px;
   }
-  
+
   .philosophy__content {
     padding-right: 0;
   }
-  
+
   .philosophy__lang-toggle {
     width: 120px;
     height: 120px;
     right: 20px;
   }
-  
+
   .philosophy__bottom {
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
-  
+
   .philosophy__bottom-left {
     align-items: center;
   }
-  
+
   .philosophy__bottom-right {
     max-width: 100%;
     text-align: center;
   }
-  
+
   .philosophy__quote--second {
     text-align: center;
   }
-  
+
   .philosophy__attribution {
     text-align: center;
   }
-  
+
   /* Gallery Preview */
   .gallery-preview__lanterns {
     max-height: 150px;
   }
-  
+
   .gallery-preview__slogans {
     position: relative;
     height: auto;
@@ -1324,32 +1408,32 @@ body {
     gap: 20px;
     margin-bottom: 30px;
   }
-  
+
   .gallery-preview__slogan-img {
     position: relative;
     left: auto !important;
     right: auto !important;
     max-width: 200px;
   }
-  
+
   .gallery-preview__slider {
     padding: 0 40px;
     margin-top: 20px;
   }
-  
+
   .gallery-preview__slide {
     min-width: 350px;
     height: 350px;
   }
-  
+
   .gallery-preview__see-more {
     margin-top: 30px;
   }
-  
+
   .footer {
     padding: 60px 40px 30px;
   }
-  
+
   .footer__top {
     flex-direction: column;
     align-items: center;
@@ -1363,12 +1447,12 @@ body {
   .header {
     padding: 15px 20px;
   }
-  
+
   .nav__logo {
     width: 50px;
     height: 57px;
   }
-  
+
   .nav__menu {
     display: none;
     position: absolute;
@@ -1380,19 +1464,19 @@ body {
     padding: 30px;
     gap: 20px;
   }
-  
+
   .nav__menu.active {
     display: flex;
   }
-  
+
   .nav__hamburger {
     display: flex;
   }
-  
+
   .nav__link {
     font-size: 24px;
   }
-  
+
   /* === HOME MOBILE: Layout chính xác theo Figma === */
   /* Frame: 440x956px -> Scale to mobile (375px width) */
   .hero {
@@ -1404,7 +1488,7 @@ body {
     padding: 80px 20px 60px;
     overflow: hidden;
   }
-  
+
   .hero__content {
     flex-direction: column;
     padding: 0;
@@ -1416,7 +1500,7 @@ body {
     max-width: 100%;
     gap: 0;
   }
-  
+
   /* === PART 1: DoraChann Portfolio (home1) === */
   /* DoraChann: Figma pos(166, 261) = 37.7% left, 27.3% top, RIGHT align */
   .hero__portfolio {
@@ -1427,67 +1511,78 @@ body {
     top: 0;
     width: 100%;
     padding-right: 20px;
-    margin-top: 60px; /* ~27% of 956px */
+    margin-top: 60px;
+    /* ~27% of 956px */
   }
-  
+
   /* DoraChann - Figma: 64px, weight 300, line-height 71.5px, RIGHT */
   .hero__name {
-    font-size: 55px; /* Scaled: 64 * (375/440) = 55px */
-    margin-bottom: 15px; /* Spacing to PortfoLio: ~57px scaled */
+    font-size: 55px;
+    /* Scaled: 64 * (375/440) = 55px */
+    margin-bottom: 15px;
+    /* Spacing to PortfoLio: ~57px scaled */
     font-weight: 300;
-    line-height: 61px; /* Scaled: 71.5 * (375/440) = 61px */
+    line-height: 61px;
+    /* Scaled: 71.5 * (375/440) = 61px */
     text-align: right;
     font-family: 'Handjet', monospace;
   }
-  
+
   /* PortfoLio - Figma: 128px, weight 600, line-height 143px, RIGHT */
   /* Position: Figma pos(41, 318) = 9.3% left, 33.3% top */
   .hero__title {
-    font-size: 109px; /* Scaled: 128 * (375/440) = 109px */
+    font-size: 109px;
+    /* Scaled: 128 * (375/440) = 109px */
     margin-bottom: 0;
     font-weight: 600;
-    line-height: 122px; /* Scaled: 143 * (375/440) = 122px */
+    line-height: 122px;
+    /* Scaled: 143 * (375/440) = 122px */
     text-align: right;
     font-family: 'Handjet', monospace;
   }
-  
+
   /* === PART 2: WELCOME TO my Vietnameseland (home2) === */
   /* WELCOME: Figma pos(103, 285) = 23.4% left, 29.8% top, LEFT align */
   .hero__text {
     order: 2;
-    margin-top: 40px; /* Spacing from Portfolio */
+    margin-top: 40px;
+    /* Spacing from Portfolio */
     width: 100%;
     padding-left: 20px;
   }
-  
+
   /* WELCOME - Figma: 64px, weight 600, line-height 71.5px, LEFT */
   .hero__welcome {
-    font-size: 55px; /* Scaled: 64 * (375/440) = 55px */
+    font-size: 55px;
+    /* Scaled: 64 * (375/440) = 55px */
     opacity: 1;
     transform: none;
     animation: none;
     margin-top: 0;
-    line-height: 61px; /* Scaled: 71.5 * (375/440) = 61px */
+    line-height: 61px;
+    /* Scaled: 71.5 * (375/440) = 61px */
     text-align: left;
     font-family: 'Handjet', monospace;
   }
-  
+
   .hero__welcome span:first-child {
     display: block;
     margin-bottom: 0;
     font-weight: 600;
   }
-  
+
   /* TO - Figma: 64px, weight 600, LEFT, pos(205, 342) */
   .hero__welcome .to {
     display: inline;
-    margin-left: 8px; /* Spacing from WELCOME */
-    margin-right: 6px; /* Spacing to my */
+    margin-left: 8px;
+    /* Spacing from WELCOME */
+    margin-right: 6px;
+    /* Spacing to my */
     font-size: 55px;
     font-weight: 600;
     font-family: 'Handjet', monospace;
   }
-  
+
   /* my - Figma: Bilbo Swash Caps 64px, weight 400, line-height 80px, LEFT */
   .hero__welcome .my {
     font-size: 55px;
@@ -1495,21 +1590,23 @@ body {
     margin-left: 0;
     margin-right: 0;
     font-weight: 400;
-    line-height: 68px; /* Scaled: 80 * (375/440) = 68px */
+    line-height: 68px;
+    /* Scaled: 80 * (375/440) = 68px */
     font-family: 'Bilbo Swash Caps', cursive;
   }
-  
+
   /* Vietnameseland - Figma: 64px, weight 300, line-height 71.5px, LEFT */
   /* Position: Figma pos(51, 399) = 11.6% left, 41.7% top */
   .hero__welcome .land {
     font-size: 55px;
     display: block;
-    margin-top: 12px; /* Spacing from "my" */
+    margin-top: 12px;
+    /* Spacing from "my" */
     font-weight: 300;
     line-height: 61px;
     font-family: 'Handjet', monospace;
   }
-  
+
   /* Lotus flowers ở bottom - 2 bông hoa */
   .hero__lotus {
     width: 100px;
@@ -1519,7 +1616,7 @@ body {
     z-index: 1;
     position: absolute;
   }
-  
+
   .hero__lotus--small {
     width: 70px;
     right: 5%;
@@ -1527,12 +1624,12 @@ body {
     top: auto;
     position: absolute;
   }
-  
+
   .hero__canvas-bg canvas {
     opacity: 0.5;
     transform: scale(1.15);
   }
-  
+
   /* === PHILOSOPHY MOBILE: Layout chính xác theo Figma === */
   /* Frame: 440x956px -> Scaled to 375px width (scale: 0.852) */
   /* Background: #000 - fixed, no overflow */
@@ -1541,21 +1638,26 @@ body {
     position: relative;
     width: 100%;
     max-width: 100vw;
-    min-height: 814px; /* Scaled: 956 * 0.852 = 814px */
-    height: 814px; /* Fixed height to prevent overflow */
+    min-height: 814px;
+    /* Scaled: 956 * 0.852 = 814px */
+    height: 814px;
+    /* Fixed height to prevent overflow */
     background: #000;
     padding: 0;
     margin: 0;
-    overflow: hidden; /* Prevent any overflow */
+    overflow: hidden;
+    /* Prevent any overflow */
   }
-  
+
   /* English version button - Figma: left: 121px, top: 160px, w: 298px, h: 42px */
   /* Scaled: left: 103px, top: 136px, w: 254px, h: 36px */
   .philosophy__lang-toggle {
     position: absolute;
-    left: 103px !important; /* Fixed from Figma scaled */
+    left: 103px !important;
+    /* Fixed from Figma scaled */
     top: 136px !important;
-    right: auto !important; /* Override desktop right positioning */
+    right: auto !important;
+    /* Override desktop right positioning */
     width: 254px !important;
     height: 36px !important;
     background: #FFE7AB;
@@ -1568,35 +1670,37 @@ body {
     justify-content: center;
     z-index: 10;
     cursor: pointer;
-    transform: none !important; /* Override desktop translateY(-50%) */
+    transform: none !important;
+    /* Override desktop translateY(-50%) */
   }
-  
+
   .philosophy__lang-toggle-text {
     color: #000;
     font-family: 'Handjet', monospace;
-    font-size: 14px; /* Scaled: 16 * 0.852 = 14px */
+    font-size: 14px;
+    /* Scaled: 16 * 0.852 = 14px */
     font-weight: 600;
     line-height: normal;
     white-space: nowrap;
   }
-  
+
   .philosophy__lang-toggle:hover {
     transform: scale(1.05) !important;
   }
-  
+
   .philosophy__lang-toggle:active {
     transform: scale(0.95) !important;
   }
-  
+
   /* Prevent rotation on mobile when clicked */
   .philosophy__lang-toggle[style*="rotate"] {
     transform: scale(1.05) !important;
   }
-  
+
   .philosophy__lang-toggle::after {
     display: none;
   }
-  
+
   /* Dragon - Figma: left calc(50% - 125px) in 440px frame, top: 236px */
   /* Scaled: left calc(50% - 107px) in 375px, top: 201px */
   /* Container: w: 168px, h: 382px (before rotation) */
@@ -1604,27 +1708,35 @@ body {
   /* Scaled image: w: 325px, h: 143px */
   .philosophy__dragon {
     position: absolute;
-    left: -95px !important; /* Moved left 20px more: -75px - 20px = -95px */
-    top: 301px; /* Reduced: 351px - 50px = 301px */
-    width: (222*1.15)px; /* Increased: 193px * 1.15 = 222px (additional 15%) */
-    height: (505*1.15)px; /* Increased: 439px * 1.15 = 505px (additional 15%) */
+    left: -95px !important;
+    /* Moved left 20px more: -75px - 20px = -95px */
+    top: 301px;
+    /* Reduced: 351px - 50px = 301px */
+    width: (222*1.15)px;
+    /* Increased: 193px * 1.15 = 222px (additional 15%) */
+    height: (505*1.15)px;
+    /* Increased: 439px * 1.15 = 505px (additional 15%) */
     display: flex;
     align-items: left;
     justify-content: left;
     z-index: 1;
   }
-  
+
   .philosophy__dragon img {
-    width: 357px !important; /* Reduced 8%: 388px * 0.92 = 357px */
-    height: 156px !important; /* Reduced 8%: 170px * 0.92 = 156px */
+    width: 357px !important;
+    /* Reduced 8%: 388px * 0.92 = 357px */
+    height: 156px !important;
+    /* Reduced 8%: 170px * 0.92 = 156px */
     aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
-    transform: rotate(90deg) scaleY(-1) translateZ(0) !important; /* Rotate 90deg + flip vertically (mirror) so feet point to text */
+    transform: rotate(90deg) scaleY(-1) translateZ(0) !important;
+    /* Rotate 90deg + flip vertically (mirror) so feet point to text */
     transform-origin: center center;
-    will-change: transform; /* Optimize transform */
+    will-change: transform;
+    /* Optimize transform */
   }
-  
+
   /* Title "ĐỐI VỚI TÔI..." - Figma: left: 204px, top: 273px, w: 183px */
   /* User: font-size: 40px, font-weight: 600, width: 183px */
   /* Scaled: left: 174px, top: 233px, w: 156px, font-size: 34px */
@@ -1635,14 +1747,15 @@ body {
     width: 156px;
     color: #FFF;
     font-family: 'Handjet', monospace;
-    font-size: 34px; /* Scaled: 40 * 0.852 = 34px */
+    font-size: 34px;
+    /* Scaled: 40 * 0.852 = 34px */
     font-weight: 600;
     line-height: normal;
     text-align: left;
     margin: 0;
     padding: 0;
   }
-  
+
   /* Quote 1 - Figma: left: 204px, top: 349px, w: 200px */
   /* User: font-size: 24px, font-weight: 500, width: 200px */
   /* Scaled: left: 174px, top: 297px, w: 170px, font-size: 20px */
@@ -1653,38 +1766,42 @@ body {
     width: 170px;
     color: #FFF;
     font-family: 'Handjet', monospace;
-    font-size: 20px; /* Scaled: 24 * 0.852 = 20px */
+    font-size: 20px;
+    /* Scaled: 24 * 0.852 = 20px */
     font-weight: 500;
     line-height: normal;
     text-align: left;
     margin: 0;
     padding: 0;
   }
-  
+
   /* Mirror 1 - Moved closer to text */
   .philosophy__mirror--first {
     position: absolute;
     left: 166px;
-    top: 330px !important; /* Moved closer: 343px - 13px = 330px */
+    top: 330px !important;
+    /* Moved closer: 343px - 13px = 330px */
     width: 200px;
     height: 51px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scaleY(-1); /* Mirror vertically */
+    transform: scaleY(-1);
+    /* Mirror vertically */
   }
-  
+
   .philosophy__mirror--first p {
     color: #41D9FF;
     font-family: 'Inter', sans-serif;
-    font-size: 12px !important; /* Reduced: 20px - 8px = 12px (smaller than phiso by 8px) */
+    font-size: 12px !important;
+    /* Reduced: 20px - 8px = 12px (smaller than phiso by 8px) */
     font-style: italic;
     font-weight: 200;
     line-height: normal;
     margin: 0;
     padding: 0;
   }
-  
+
   /* Quote 2 - Figma: left: 179px, top: 494px, w: 225px */
   /* User: font-size: 24px, font-weight: 500, width: 225px */
   /* Scaled: left: 153px, top: 421px, w: 192px, font-size: 20px */
@@ -1695,65 +1812,77 @@ body {
     width: 192px;
     color: #FFF;
     font-family: 'Handjet', monospace;
-    font-size: 20px; /* Scaled: 24 * 0.852 = 20px */
+    font-size: 20px;
+    /* Scaled: 24 * 0.852 = 20px */
     font-weight: 500;
     line-height: normal;
     text-align: left;
     margin: 0;
     padding: 0;
   }
-  
+
   /* Mirror 2 - Figma: left: 163px, top: 596px, w: 242px, h: 65px */
   /* User: color: #FF71E7, font-size: 20px, font-weight: 200, italic, width: 242px, height: 65px */
   /* Scaled: left: 139px, top: 508px, w: 206px, h: 55px, font-size: 17px */
   .philosophy__mirror--second {
     position: absolute;
-    left: 153px !important; /* Aligned with phiso2 left: 153px */
-    top: 451px !important; /* Moved closer: 464px - 13px = 451px (same gap reduction as mirror1) */
+    left: 153px !important;
+    /* Aligned with phiso2 left: 153px */
+    top: 451px !important;
+    /* Moved closer: 464px - 13px = 451px (same gap reduction as mirror1) */
     bottom: auto;
     width: 206px;
     height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scaleY(-1); /* Mirror vertically */
+    transform: scaleY(-1);
+    /* Mirror vertically */
   }
-  
+
   .philosophy__mirror--second p {
     color: #FF71E7;
     font-family: 'Inter', sans-serif;
-    font-size: 12px !important; /* Reduced: 20px - 8px = 12px (smaller than phiso by 8px) */
+    font-size: 12px !important;
+    /* Reduced: 20px - 8px = 12px (smaller than phiso by 8px) */
     font-style: italic;
     font-weight: 200;
     line-height: normal;
     margin: 0;
     padding: 0;
   }
-  
+
   /* Attribution - Figma: left: 232.5px, top: 682px, w: 341px */
   /* User: font-size: 16px, font-weight: 500, text-align: center, width: 341px */
   /* Scaled: left: 198px, top: 581px, w: 291px, font-size: 14px */
   /* Note: 232.5px in 440px frame = center, but we use exact pixel value */
   .philosophy__attribution {
     position: absolute;
-    left: 198px; /* Scaled from 232.5px (center in 440px frame) */
-    top: 581px; /* Scaled from 682px */
-    width: auto !important; /* Auto width to fit content */
-    max-width: 291px; /* Max width from original */
-    transform: none; /* Remove translateX since we use exact left value */
+    left: 198px;
+    /* Scaled from 232.5px (center in 440px frame) */
+    top: 581px;
+    /* Scaled from 682px */
+    width: auto !important;
+    /* Auto width to fit content */
+    max-width: 291px;
+    /* Max width from original */
+    transform: none;
+    /* Remove translateX since we use exact left value */
     color: #FFF;
     text-align: center;
     font-family: 'Handjet', monospace;
-    font-size: 10px !important; /* Further reduced to fit one line */
+    font-size: 10px !important;
+    /* Further reduced to fit one line */
     font-weight: 500;
     line-height: normal;
     margin: 0;
     padding: 0;
-    white-space: nowrap !important; /* Ensure single line */
+    white-space: nowrap !important;
+    /* Ensure single line */
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
+
   /* Flower - Figma: left: 42px, top: 771px, w: 106px, h: 108px, rotate 180deg */
   /* User: width: 106px, height: 108px, aspect-ratio: 53/54 */
   /* Scaled: left: 36px, top: 657px, w: 90px, h: 92px */
@@ -1766,28 +1895,32 @@ body {
     aspect-ratio: 53 / 54;
     transform: rotate(180deg);
   }
-  
+
   .philosophy__flower img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
-  
+
   /* CTA Button "Read more about me" - Figma: left: 160px, top: 804px, w: 167px, h: 42px */
   /* User: border-radius: 20px, background: #FFE7AB, width: 167px, height: 42px */
   /* Text: color: #000, font-size: 16px, font-weight: 600 */
   /* Scaled: left: 136px, top: 685px, w: 142px, h: 36px, font-size: 14px */
   .philosophy__cta {
     position: absolute;
-    left: 136px; /* Scaled from 160px */
-    top: 685px; /* Scaled from 804px */
-    width: 142px; /* Scaled from 167px */
-    height: 36px; /* Scaled from 42px */
+    left: 136px;
+    /* Scaled from 160px */
+    top: 685px;
+    /* Scaled from 804px */
+    width: 142px;
+    /* Scaled from 167px */
+    height: 36px;
+    /* Scaled from 42px */
     margin: 0;
     padding: 0;
     z-index: 2;
   }
-  
+
   .philosophy__cta-btn {
     display: flex;
     align-items: center;
@@ -1798,7 +1931,8 @@ body {
     border-radius: 20px;
     color: #000;
     font-family: 'Handjet', monospace;
-    font-size: 14px; /* Scaled: 16 * 0.852 = 14px */
+    font-size: 14px;
+    /* Scaled: 16 * 0.852 = 14px */
     font-weight: 600;
     line-height: normal;
     text-decoration: none;
@@ -1806,11 +1940,11 @@ body {
     cursor: pointer;
     white-space: nowrap;
   }
-  
+
   .philosophy__cta-btn:hover {
     transform: scale(1.05);
   }
-  
+
   /* === GALLERY PREVIEW MOBILE: Layout chính xác theo Figma === */
   /* Frame: 440x956px, background black */
   /* Lanterns ở top, Slogans ở giữa, Slider ở dưới */
@@ -1823,16 +1957,17 @@ body {
     gap: 0;
     background: var(--color-black);
   }
-  
+
   /* Lanterns ở top - Figma: 1139x413px (full width banner) */
   .gallery-preview__lanterns {
-    max-height: 180px; /* Scaled: 413 * (375/440) = 352px, nhưng giữ tỷ lệ */
+    max-height: 180px;
+    /* Scaled: 413 * (375/440) = 352px, nhưng giữ tỷ lệ */
     margin-bottom: 0;
     width: 100%;
     object-fit: cover;
     order: 1;
   }
-  
+
   /* Slogans - Figma: left(203x332px), center(112x363px), right(111x299px) */
   /* Position: left pos(0, 478), center pos(233, 447), right pos(329, 479) */
   .gallery-preview__slogans {
@@ -1845,7 +1980,8 @@ body {
     max-width: 100%;
     height: auto;
     padding: 15px 10px;
-    justify-content: space-around; /* Distribute evenly */
+    justify-content: space-around;
+    /* Distribute evenly */
     align-items: center;
     flex-wrap: nowrap;
     gap: 8px;
@@ -1853,20 +1989,22 @@ body {
     order: 2;
     z-index: 2;
   }
-  
+
   .gallery-preview__slogan-img {
     position: relative !important;
     left: auto !important;
     right: auto !important;
     height: auto;
-    max-height: 280px; /* Scaled: 363 * (375/440) = 309px, nhưng giữ tỷ lệ */
+    max-height: 280px;
+    /* Scaled: 363 * (375/440) = 309px, nhưng giữ tỷ lệ */
     width: auto;
-    max-width: 30%; /* 3 slogans chia đều */
+    max-width: 30%;
+    /* 3 slogans chia đều */
     margin: 0;
     flex-shrink: 0;
     object-fit: contain;
   }
-  
+
   /* Slider container - ở dưới slogans */
   /* Figma: có colored box với slider bên trong */
   .gallery-preview__slider {
@@ -1884,66 +2022,68 @@ body {
     position: relative;
     z-index: 3;
   }
-  
+
   .gallery-preview__slides {
     width: 100%;
-    max-width: 320px; /* Scaled từ Figma */
-    height: 280px; /* Scaled từ Figma */
+    max-width: 320px;
+    /* Scaled từ Figma */
+    height: 280px;
+    /* Scaled từ Figma */
     order: 0;
   }
-  
+
   .gallery-preview__slide {
     min-width: 280px;
     height: 280px;
   }
-  
+
   .gallery-preview__arrow {
     width: 40px;
     height: 40px;
   }
-  
+
   .gallery-preview__arrow--prev {
     order: -1;
   }
-  
+
   .gallery-preview__arrow--next {
     order: 1;
   }
-  
+
   /* CTA button */
   .gallery-preview__cta {
     margin-top: 25px;
     order: 4;
     text-align: center;
   }
-  
+
   .footer {
     padding: 40px 20px;
   }
-  
+
   .footer__top {
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .footer__nav {
     flex-wrap: wrap;
     gap: 30px;
   }
-  
+
   .footer__link {
     font-size: 24px;
   }
-  
+
   .footer__name {
     font-size: 36px;
   }
-  
+
   .footer__contact {
     flex-wrap: wrap;
     gap: 15px;
   }
-  
+
   .footer__contact-label,
   .footer__contact-item {
     font-size: 18px;
