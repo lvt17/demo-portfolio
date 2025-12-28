@@ -557,7 +557,7 @@
     /* Increased from 350px */
     max-width: none !important;
     overflow-x: visible !important;
-    margin-left: -100% !important;
+    margin-left: -50% !important;
     position: relative !important;
     display: flex !important;
     justify-content: center !important;
