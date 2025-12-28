@@ -553,7 +553,7 @@
   }
 
   .about-hero__temple {
-    width: 500% !important;
+    width: 900% !important;
     /* Increased from 350px */
     max-width: none !important;
     overflow-x: visible !important;
