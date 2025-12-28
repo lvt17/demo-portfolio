@@ -553,9 +553,9 @@
   }
 
   .about-hero__temple {
-    width: 100% !important;
+    width: 200% !important;
     /* Increased from 350px */
-    max-width: 100% !important;
+    max-width: 200% !important;
     margin: 0 auto !important;
     position: relative !important;
     display: flex !important;
@@ -725,6 +725,7 @@
 
   .about-contact__dragon {
     position: relative !important;
+    top: 20px !important;
     width: 100% !important;
     right: 0 !important;
     margin-top: 40px !important;

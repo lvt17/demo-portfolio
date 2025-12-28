@@ -292,11 +292,12 @@
 @media (max-width: 576px) {
   /* Scale factor: 375/440 = 0.852 */
 
-  /* === HOME 1 Section: Contains both Portfolio and Welcome pages === */
-  /* Figma Design: 78:158 (Portfolio) + 78:167 (Welcome) = 2 vertical pages */
+  /* === HOME 1 Section: Only Portfolio on mobile (no Welcome) === */
+  /* Figma Design: 78:158 - Only DoraChann + Portfolio text */
   .home-1 {
-    min-height: 200vh;
-    /* 2 pages */
+    min-height: 100vh;
+    /* Single page - Portfolio only */
+    height: 100vh;
     position: relative;
     padding: 0;
     overflow: hidden;
@@ -310,35 +311,23 @@
     max-width: 100%;
     position: relative;
     min-height: 100vh;
-    /* First page - Portfolio */
   }
 
   .home-1__portfolio {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* First page takes full viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  /* Position elements relative to section, not content container */
-  .home-1__portfolio {
-    position: static !important;
-  }
-
-  /* === WELCOME Section: Second page on mobile === */
-  /* Figma Design 78:167 - Shows after Portfolio */
+  /* === WELCOME Section: HIDDEN on mobile === */
+  /* Figma 78-158 does NOT include Welcome text on Home 1 mobile */
   .home-1__welcome-desktop {
-    display: block !important;
-    /* Show on mobile */
-    position: relative !important;
-    /* Flow layout, not absolute */
-    left: auto !important;
-    top: auto !important;
-    width: 100%;
-    height: 100vh;
-    /* Second page takes full viewport */
-    padding: 150px 30px 50px;
-    box-sizing: border-box;
+    display: none !important;
+    /* Hidden on mobile per Figma */
   }
 
   /* Reset absolute positioning for WELCOME children on mobile */
