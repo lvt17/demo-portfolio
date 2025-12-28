@@ -674,7 +674,7 @@ ul {
 
   /* Mirror 2 - English version: Wider, allows text wrap */
   body.lang-en .philosophy__mirror--second {
-    right: 20px;
+    right: 100px;
     /* Match Quote 2 English */
     width: 1200px;
     /* Same as Quote 2 English for consistent wrap */

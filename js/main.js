@@ -224,10 +224,10 @@ function initLanguageToggle() {
         }
         if (mirror1) {
           mirror1.style.left = '140px'; // Same as Quote 1
-          mirror1.style.top = '790px';
+          mirror1.style.top = '830px';
         }
         if (mirror1P) {
-          mirror1P.style.fontSize = '43px'; // Increased from 24px
+          mirror1P.style.fontSize = '44px'; // Increased from 24px
         }
         if (quote2) {
           // Alignment: Right aligned, fixed width to force wrap at "...is lost"
@@ -243,7 +243,7 @@ function initLanguageToggle() {
           mirror2.style.top = '1100px';
         }
         if (mirror2P) {
-          mirror2P.style.fontSize = '43px'; // Increased from 24px
+          mirror2P.style.fontSize = '44px'; // Increased from 24px
         }
         if (attribution) {
           attribution.style.top = '1200px'; // Lowered further
