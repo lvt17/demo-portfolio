@@ -546,19 +546,37 @@
 
 /* Mobile only */
 @media (max-width: 576px) {
+
+  /* Allow temple to overflow parent containers */
+  .about-hero {
+    overflow: hidden !important;
+  }
+
+  .about-hero__inner {
+    overflow: hidden !important;
+    /* Override desktop overflow:hidden */
+  }
+
   .about-hero__title {
     font-size: 24px !important;
     padding: 0 15px !important;
     max-width: 200px !important;
   }
 
+  .about-hero__temple img {
+    width: 160% !important;
+    max-width: none !important;
+    height: auto !important;
+  }
+
   .about-hero__temple {
-    width: 900% !important;
+    width: 200% !important;
     /* Increased from 350px */
     max-width: none !important;
     overflow-x: visible !important;
-    margin-left: -50% !important;
+    margin-left: -30% !important;
     position: relative !important;
+    left: 45px;
     display: flex !important;
     justify-content: center !important;
   }

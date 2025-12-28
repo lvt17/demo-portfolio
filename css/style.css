@@ -611,13 +611,14 @@ ul {
   .philosophy__mirror--second {
     position: absolute;
     left: 800px;
+    /* Điều chỉnh số này để di chuyển ngang */
     /* Default Vietnamese position */
     top: 980px;
     height: 50px;
     width: 784px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     /* Aligns content to the right inside the container */
     transform: scaleY(-1);
     z-index: 3;

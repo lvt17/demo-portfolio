@@ -159,6 +159,10 @@ function initLanguageToggle() {
       el.textContent = lang === 'vi' ? el.dataset.vi : el.dataset.en;
     });
 
+    // Add body class for CSS targeting
+    document.body.classList.remove('lang-vi', 'lang-en');
+    document.body.classList.add(lang === 'vi' ? 'lang-vi' : 'lang-en');
+
     if (langToggle) {
       langToggle.title = lang === 'vi' ? 'Switch to English' : 'Chuyển sang tiếng Việt';
     }
