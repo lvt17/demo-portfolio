@@ -2146,7 +2146,8 @@ body {
 
   /* English Mobile - Quote 1: top += 20px */
   body.lang-en .philosophy__quote--first {
-    left: 20px;
+    left: 166px;
+    /* Same as Mirror 1 */
     top: 320px;
     /* 300 + 20 */
   }
